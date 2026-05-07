@@ -1,26 +1,48 @@
-name: Megon CSS Minifier
+name: Megon CSS Build
+
 on:
   push:
     branches:
       - main
+
 permissions:
   contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
 
-      - name: Combine and Minify CSS
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install CleanCSS
+        run: npm install -g clean-css-cli
+
+      - name: Build CSS
         run: |
           mkdir -p dist/latest
-          find src -type f -name "*.css" -not -name "megon.css" -exec cat {} + > dist/latest/megon.css
-          grep -v "@import" dist/latest/megon.css | tr -d '\n' | sed 's/  */ /g' | sed 's/ :/:/g' | sed 's/ {/{/g' | sed 's/{ /{/g' | sed 's/ ;/;/g' | sed 's/; /;/g' > dist/latest/megon.min.css
 
-      - name: Commit files
+          find src -type f -name "*.css" \
+          ! -name "megon.css" \
+          | sort \
+          | xargs cat > dist/latest/megon.css
+
+          cleancss -o dist/latest/megon.min.css dist/latest/megon.css
+
+      - name: Commit Build Files
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add -f dist/
-          git commit -m "Auto-minify megon.css" || exit 0
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add dist/
+
+          git diff --cached --quiet && exit 0
+
+          git commit -m "Build Megon CSS"
           git push
