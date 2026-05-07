@@ -66,7 +66,7 @@
   pointer-events: none;
 }
 
-/* Loading State */
+/* Loading State Fixed */
 .btn-loading {
   position: relative;
   color: transparent !important;
@@ -78,7 +78,11 @@
   position: absolute;
   width: 16px;
   height: 16px;
-  border: 2px solid currentColor;
+  top: 50%;
+  left: 50%;
+  margin-top: -8px; /* Perfectly center */
+  margin-left: -8px; /* Perfectly center */
+  border: 2px solid rgba(255, 255, 255, 0.8); /* White spinner for dark button */
   border-radius: 50%;
   border-top-color: transparent;
   animation: spin 0.6s linear infinite;
