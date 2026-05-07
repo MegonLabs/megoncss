@@ -1,4 +1,4 @@
-name: Megon CSS Build
+name: Megon CSS Build & Deploy
 on:
   push:
     branches:
@@ -22,16 +22,16 @@ jobs:
 
       - name: Combine CSS Files
         run: |
-          mkdir -p dist/latest
-          rm -f dist/latest/megon.css
+          mkdir -p dist/1.0.0
+          rm -f dist/1.0.0/megon.css
           find src -type f -iname "*.css" ! -name "megon.css" | sort | while read file; do
-            cat "$file" >> dist/latest/megon.css
-            echo "" >> dist/latest/megon.css
+            cat "$file" >> dist/1.0.0/megon.css
+            echo "" >> dist/1.0.0/megon.css
           done
 
       - name: Minify CSS
         run: |
-          cleancss -O2 -o dist/latest/megon.min.css dist/latest/megon.css
+          cleancss -O2 -o dist/1.0.0/megon.min.css dist/1.0.0/megon.css
 
       - name: Commit Build Files
         run: |
@@ -39,5 +39,14 @@ jobs:
           git config user.email "github-actions@github.com"
           git add dist/
           git diff --cached --quiet && exit 0
-          git commit -m "Production Build: Megon CSS Optimized"
+          git commit -m "Production Build: Version 1.0.0"
           git push
+
+      - name: FTP Deploy to cPanel
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/
+          server-dir: /cdn.megon.org/
