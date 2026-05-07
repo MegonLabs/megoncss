@@ -64,6 +64,234 @@ a {
 }
 
 
+/* Megon UI: Button Component */
+
+.btn {
+  /* Foundations */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-family: var(--font-geist);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-base);
+  line-height: var(--font-lineHeight-base);
+  transition: background-color var(--motion-instant), opacity var(--motion-instant);
+  cursor: pointer;
+  border: 1px solid transparent;
+  outline: none;
+  gap: var(--space-4);
+  user-select: none;
+}
+
+/* Variants */
+.btn-primary {
+  background-color: var(--color-surface-base); /* #000000 */
+  color: var(--color-text-secondary); /* Inverse/White */
+}
+
+.btn-secondary {
+  background-color: var(--color-surface-muted);
+  color: var(--color-text-primary);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--color-border-default);
+  color: var(--color-text-primary);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--color-text-primary);
+}
+
+/* Sizes */
+.btn-sm { height: 32px; padding: 0 var(--space-6); font-size: var(--font-size-sm); border-radius: var(--radius-xs); }
+.btn-md { height: 40px; padding: 0 var(--space-8); font-size: var(--font-size-md); border-radius: var(--radius-sm); }
+.btn-lg { height: 48px; padding: 0 var(--space-8); font-size: var(--font-size-lg); border-radius: var(--radius-sm); }
+.btn-icon { width: 40px; height: 40px; padding: 0; border-radius: var(--radius-sm); }
+
+/* States */
+.btn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: 2px;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Loading State */
+.btn-loading {
+  position: relative;
+  color: transparent !important;
+  pointer-events: none;
+}
+
+.btn-loading::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Megon UI: Field (Input) Component */
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3); /* 4px */
+  width: 100%;
+}
+
+.label {
+  font-family: var(--font-geist);
+  font-size: var(--font-size-sm); /* 14px */
+  font-weight: var(--font-weight-base);
+  color: var(--color-text-primary);
+  line-height: 1;
+  user-select: none;
+}
+
+.input {
+  /* Foundations */
+  width: 100%;
+  height: 40px;
+  padding: 0 var(--space-6); /* 12px */
+  background-color: transparent;
+  color: var(--color-text-primary);
+  font-family: var(--font-geist);
+  font-size: var(--font-size-sm);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-sm); /* 8px */
+  transition: border-color var(--motion-instant), box-shadow var(--motion-instant);
+}
+
+.input::placeholder {
+  color: var(--color-text-secondary);
+  opacity: 1;
+}
+
+/* States */
+.input:hover:not(:disabled):not(.input-error) {
+  border-color: var(--color-border-muted);
+}
+
+.input:focus-visible {
+  outline: none;
+  border-color: var(--color-text-primary);
+  box-shadow: var(--shadow-2); /* Focused ring effect */
+}
+
+.input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--color-surface-muted);
+}
+
+/* Error State */
+.input-error {
+  border-color: var(--m-red) !important;
+}
+
+.field-error-message {
+  font-size: var(--font-size-xs);
+  color: var(--m-red);
+  font-weight: 500;
+}
+
+/* Success/Description State */
+.field-description {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    padding: 8px 12px;
+    background-color: transparent;
+    border: 1px solid #e5e7eb;
+    border-radius: var(--rounded);
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--m-black);
+    ring: 2px solid rgba(0,0,0,0.1);
+}
+
+.label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9000;
+}
+
+.modal-content {
+    background-color: var(--m-white);
+    padding: 24px;
+    border-radius: var(--rounded-lg);
+    border: 1px solid #e5e7eb;
+    width: 100%;
+    max-width: 450px;
+    shadow: var(--shadow-xl);
+}
+
+.modal-header { margin-bottom: 16px; }
+.modal-footer { margin-top: 24px; display: flex; justify-content: flex-end; gap: 8px; }
+
+.toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    min-width: 300px;
+    padding: 16px;
+    background-color: var(--m-white);
+    border: 1px solid #e5e7eb;
+    border-radius: var(--rounded);
+    shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 9999;
+}
+
+.toast-title { font-weight: 600; font-size: 14px; }
+.toast-desc { font-size: 13px; color: var(--m-gray); }
+
 /* Mobile is default (0px+) */
 .hidden { display: none; }
 
