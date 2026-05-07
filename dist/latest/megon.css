@@ -413,6 +413,9 @@ body.dark {
 .gap-sm { gap: var(--p-sm); }
 .gap-md { gap: var(--p-md); }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
 /* Padding */
 .p-xs { padding: var(--p-xs); }
 .p-sm { padding: var(--p-sm); }
