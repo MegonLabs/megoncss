@@ -17,3 +17,7 @@
 
 .gap-sm { gap: var(--p-sm); }
 .gap-md { gap: var(--p-md); }
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
