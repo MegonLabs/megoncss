@@ -13,7 +13,6 @@ jobs:
 
       - name: Combine and Minify CSS
         run: |
-          rm -rf dist/latest
           mkdir -p dist/latest
           find src -type f -name "*.css" -not -name "megon.css" -exec cat {} + > dist/latest/megon.css
           grep -v "@import" dist/latest/megon.css | tr -d '\n' | sed 's/  */ /g' | sed 's/ :/:/g' | sed 's/ {/{/g' | sed 's/{ /{/g' | sed 's/ ;/;/g' | sed 's/; /;/g' > dist/latest/megon.min.css
