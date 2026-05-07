@@ -416,6 +416,9 @@ body.dark {
 
 .gap-sm { gap: var(--p-sm); }
 .gap-md { gap: var(--p-md); }
+.gap-xl {
+    gap: var(--p-xl);
+}
 
 .flex-wrap {
   flex-wrap: wrap;
