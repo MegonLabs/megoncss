@@ -1,0 +1,28 @@
+name: Megon CSS Minifier
+on:
+  push:
+      branches:
+            - main
+            jobs:
+              build:
+                  runs-on: ubuntu-latest
+                      steps:
+                            - uses: actions/checkout@v3
+
+                                  - name: Combine and Minify CSS
+                                          run: |
+                                                    mkdir -p dist/latest
+                                                              # All source file combined
+                                                                        cat src/base/*.css src/utilities/*.css src/components/*.css > dist/latest/megon.css
+                                                                                  
+                                                                                            # Remove for CDN
+                                                                                                      tr -d '\n' < dist/latest/megon.css | sed 's/  */ /g' | sed 's/ :/:/g' | sed 's/ {/{/g' | sed 's/{ /{/g' | sed 's/ ;/;/g' | sed 's/; /;/g' > dist/latest/megon.min.css
+
+                                                                                                            - name: Commit files
+                                                                                                                    run: |
+                                                                                                                              git config --local user.email "action@github.com"
+                                                                                                                                        git config --local user.name "GitHub Action"
+                                                                                                                                                  git add dist/
+                                                                                                                                                            git commit -m "Auto-minify megon.css" || exit 0
+                                                                                                                                                                      git push
+                                                                                                                                                                      
