@@ -13,11 +13,9 @@ jobs:
 
       - name: Combine and Minify CSS
         run: |
+          rm -rf dist/latest
           mkdir -p dist/latest
-          # ১. সব ফাইল জোড়া লাগানো (megon.css বাদ দিয়ে যেন লুপ না হয়)
-          find src -name "*.css" -not -name "megon.css" -type f -exec cat {} + > dist/latest/megon.css
-          
-          # ২. মিনফাই করা এবং যেকোনো @import লাইন মুছে ফেলা
+          find src -type f -name "*.css" -not -name "megon.css" -exec cat {} + > dist/latest/megon.css
           grep -v "@import" dist/latest/megon.css | tr -d '\n' | sed 's/  */ /g' | sed 's/ :/:/g' | sed 's/ {/{/g' | sed 's/{ /{/g' | sed 's/ ;/;/g' | sed 's/; /;/g' > dist/latest/megon.min.css
 
       - name: Commit files
