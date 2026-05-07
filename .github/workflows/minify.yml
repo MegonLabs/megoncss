@@ -1,17 +1,13 @@
 name: Megon CSS Build
-
 on:
   push:
     branches:
       - main
-
 permissions:
   contents: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -27,33 +23,18 @@ jobs:
       - name: Combine CSS Files
         run: |
           mkdir -p dist/latest
-
-          find src \
-            -type f \
-            -iname "*.css" \
-            ! -name "megon.css" \
-            | sort \
-            | while read file; do
-                echo "Adding: $file"
-                cat "$file" >> dist/latest/megon.css
-                echo "" >> dist/latest/megon.css
-              done
+          rm -f dist/latest/megon.css
+          find src -type f -iname "*.css" ! -name "megon.css" | sort | xargs cat >> dist/latest/megon.css
 
       - name: Minify CSS
         run: |
-          cleancss \
-            -O2 \
-            -o dist/latest/megon.min.css \
-            dist/latest/megon.css
+          cleancss -O2 -o dist/latest/megon.min.css dist/latest/megon.css
 
       - name: Commit Build Files
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-
           git add dist/
-
           git diff --cached --quiet && exit 0
-
           git commit -m "Build Megon CSS"
           git push
