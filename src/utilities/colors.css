@@ -1,0 +1,13 @@
+/* Backgrounds */
+.bg-blue { background-color: var(--m-blue); }
+.bg-blue-light { background-color: var(--m-blue-light); }
+.bg-blue-dark { background-color: var(--m-blue-dark); }
+
+.bg-white { background-color: var(--m-white); }
+.bg-gray-light { background-color: var(--m-gray-light); }
+
+/* Text Colors */
+.text-white { color: var(--m-white); }
+.text-blue { color: var(--m-blue); }
+.text-gray { color: var(--m-gray); }
+

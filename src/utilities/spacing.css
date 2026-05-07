@@ -1,0 +1,13 @@
+/* Padding */
+.p-xs { padding: var(--p-xs); }
+.p-sm { padding: var(--p-sm); }
+.p-md { padding: var(--p-md); }
+.p-lg { padding: var(--p-lg); }
+.p-xl { padding: var(--p-xl); }
+
+/* Margin */
+.m-xs { margin: var(--p-xs); }
+.m-sm { margin: var(--p-sm); }
+.m-md { margin: var(--p-md); }
+.m-lg { margin: var(--p-lg); }
+.m-xl { margin: var(--p-xl); }

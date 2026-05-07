@@ -1,0 +1,19 @@
+.flex { display: flex; }
+.col { flex-direction: column; }
+.row { flex-direction: row; }
+
+/* Smart Helpers */
+.center { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.between { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.gap-sm { gap: var(--p-sm); }
+.gap-md { gap: var(--p-md); }
