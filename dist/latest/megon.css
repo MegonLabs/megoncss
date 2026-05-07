@@ -426,20 +426,83 @@ body.dark {
 .flex-wrap {
   flex-wrap: wrap;
 }
-/* Padding */
+/* =================== */
+/* Padding Utilities   */
+/* =================== */
+
+/* All Sides */
 .p-xs { padding: var(--p-xs); }
 .p-sm { padding: var(--p-sm); }
 .p-md { padding: var(--p-md); }
 .p-lg { padding: var(--p-lg); }
 .p-xl { padding: var(--p-xl); }
 
-/* Margin */
+/* Padding Top */
+.p-t-xs { padding-top: var(--p-xs); }
+.p-t-sm { padding-top: var(--p-sm); }
+.p-t-md { padding-top: var(--p-md); }
+.p-t-lg { padding-top: var(--p-lg); }
+.p-t-xl { padding-top: var(--p-xl); }
+
+/* Padding Bottom */
+.p-b-xs { padding-bottom: var(--p-xs); }
+.p-b-sm { padding-bottom: var(--p-sm); }
+.p-b-md { padding-bottom: var(--p-md); }
+.p-b-lg { padding-bottom: var(--p-lg); }
+.p-b-xl { padding-bottom: var(--p-xl); }
+
+/* Padding Left */
+.p-l-xs { padding-left: var(--p-xs); }
+.p-l-sm { padding-left: var(--p-sm); }
+.p-l-md { padding-left: var(--p-md); }
+.p-l-lg { padding-left: var(--p-lg); }
+.p-l-xl { padding-left: var(--p-xl); }
+
+/* Padding Right */
+.p-r-xs { padding-right: var(--p-xs); }
+.p-r-sm { padding-right: var(--p-sm); }
+.p-r-md { padding-right: var(--p-md); }
+.p-r-lg { padding-right: var(--p-lg); }
+.p-r-xl { padding-right: var(--p-xl); }
+
+/* =================== */
+/* Margin Utilities    */
+/* =================== */
+
+/* All Sides */
 .m-xs { margin: var(--p-xs); }
 .m-sm { margin: var(--p-sm); }
 .m-md { margin: var(--p-md); }
 .m-lg { margin: var(--p-lg); }
 .m-xl { margin: var(--p-xl); }
 
+/* Margin Top */
+.m-t-xs { margin-top: var(--p-xs); }
+.m-t-sm { margin-top: var(--p-sm); }
+.m-t-md { margin-top: var(--p-md); }
+.m-t-lg { margin-top: var(--p-lg); }
+.m-t-xl { margin-top: var(--p-xl); }
+
+/* Margin Bottom */
+.m-b-xs { margin-bottom: var(--p-xs); }
+.m-b-sm { margin-bottom: var(--p-sm); }
+.m-b-md { margin-bottom: var(--p-md); }
+.m-b-lg { margin-bottom: var(--p-lg); }
+.m-b-xl { margin-bottom: var(--p-xl); }
+
+/* Margin Left */
+.m-l-xs { margin-left: var(--p-xs); }
+.m-l-sm { margin-left: var(--p-sm); }
+.m-l-md { margin-left: var(--p-md); }
+.m-l-lg { margin-left: var(--p-lg); }
+.m-l-xl { margin-left: var(--p-xl); }
+
+/* Margin Right */
+.m-r-xs { margin-right: var(--p-xs); }
+.m-r-sm { margin-right: var(--p-sm); }
+.m-r-md { margin-right: var(--p-md); }
+.m-r-lg { margin-right: var(--p-lg); }
+.m-r-xl { margin-right: var(--p-xl); }
 .text-xs { font-size: 12px; }
 .text-sm { font-size: 14px; }
 .text-md { font-size: 16px; }
