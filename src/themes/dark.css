@@ -1,0 +1,13 @@
+.dark {
+    --m-bg: #09090b;
+    --m-text: #fafafa;
+    --m-border: #27272a;
+    --m-muted: #27272a;
+    --m-primary: #fafafa;
+    --m-secondary: #27272a;
+}
+
+body.dark {
+    background-color: var(--m-bg);
+    color: var(--m-text);
+}
