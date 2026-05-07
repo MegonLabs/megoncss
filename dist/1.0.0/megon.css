@@ -309,6 +309,10 @@ a {
     justify-content: flex-end;
     gap: 8px;
 }
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; font-weight: 600; font-size: 14px; color: var(--m-gray); padding: 12px; border-bottom: 1px solid var(--border); }
+td { padding: 16px 12px; font-size: 14px; border-bottom: 1px solid var(--border); }
+
 .toast {
     position: fixed;
     bottom: 16px;
