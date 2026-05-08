@@ -335,8 +335,6 @@ a {
     border: none;
 }
 
-/* Megon UI: Field & Input Components */
-
 .field-group {
     display: flex;
     flex-direction: column;
@@ -351,25 +349,27 @@ a {
     color: var(--color-text-primary);
     line-height: 1;
     user-select: none;
+    transition: color var(--motion-instant);
 }
 
-/* Base Input Styles */
 .input {
     width: 100%;
     height: 40px;
-    padding: 0 var(--space-8);
+    padding: 0 12px;
     background-color: transparent;
     color: var(--color-text-primary);
     font-family: var(--font-geist);
     font-size: var(--font-size-sm);
     border: 1px solid var(--color-border-default);
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-xs);
     transition: all var(--motion-instant);
+    outline: none;
+    box-sizing: border-box;
 }
 
 .input::placeholder {
     color: var(--m-gray);
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
 .input:hover:not(:disabled):not(.input-error) {
@@ -377,9 +377,8 @@ a {
 }
 
 .input:focus-visible {
-    outline: 0;
     border-color: var(--color-text-primary);
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 0 1px var(--color-text-primary);
 }
 
 .input:disabled {
@@ -392,7 +391,29 @@ a {
     border-color: var(--m-red) !important;
 }
 
-/* Advanced Input Types (Date, Time) */
+.input-error:focus-visible {
+    box-shadow: 0 0 0 1px var(--m-red) !important;
+}
+
+.input-with-icon-left {
+    padding-left: 38px !important;
+}
+
+.icon-left {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--m-gray);
+    font-size: 14px;
+    pointer-events: none;
+    transition: color var(--motion-instant);
+}
+
+.input:focus-visible + .icon-left {
+    color: var(--color-text-primary);
+}
+
 .input[type="date"],
 .input[type="time"],
 .input[type="datetime-local"],
@@ -405,18 +426,17 @@ a {
     cursor: pointer;
     opacity: 0.6;
     transition: opacity 150ms;
-    filter: invert(0); /* Default for light mode */
 }
 
-.input::-webkit-calendar-picker-indicator:hover {
-    opacity: 1;
+.dark .input::-webkit-calendar-picker-indicator {
+    filter: invert(1);
 }
 
-/* File Input Styling */
 .input-file {
     padding: 0;
     line-height: 38px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .input-file::file-selector-button {
@@ -437,7 +457,6 @@ a {
     background: var(--color-border-muted);
 }
 
-/* Checkbox & Radio Styles */
 .checkbox, .radio {
     appearance: none;
     width: 16px;
@@ -448,7 +467,7 @@ a {
     display: grid;
     place-content: center;
     cursor: pointer;
-    transition: background-color 150ms;
+    transition: all 150ms;
 }
 
 .checkbox { border-radius: 4px; }
@@ -466,6 +485,10 @@ a {
     clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
 }
 
+.dark .checkbox:checked::before {
+    background-color: #000;
+}
+
 .radio:checked::before {
     content: "";
     width: 6px;
@@ -474,16 +497,14 @@ a {
     background-color: var(--m-white);
 }
 
-.checkbox:focus-visible, .radio:focus-visible {
-    outline: 2px solid var(--color-text-primary);
-    outline-offset: 2px;
+.dark .radio:checked::before {
+    background-color: #000;
 }
 
-/* Field Helpers */
 .checkbox-group {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
 .checkbox-label {
@@ -495,16 +516,26 @@ a {
 }
 
 .field-error-message {
-    font-size: var(--font-size-xs);
+    font-size: 12px;
     color: var(--m-red);
     font-weight: 500;
-    margin-top: 2px;
+    margin-top: 4px;
 }
 
 .field-description {
-    font-size: var(--font-size-xs);
+    font-size: 12px;
     color: var(--m-gray);
-    margin-top: 2px;
+    margin-top: 4px;
+    line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+    .input {
+        font-size: 16px; /* Prevents iOS auto-zoom */
+    }
+    .checkbox-group {
+        gap: 12px;
+    }
 }
 
 .modal-overlay {
