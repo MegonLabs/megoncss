@@ -301,48 +301,90 @@ a {
     border: none;
 }
 
-/* Megon UI: Field (Input) Component */
+/* Megon UI: Field & Input Components */
 
 .field-group {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3); /* 4px */
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    width: 100%;
 }
 
 .label {
-  font-family: var(--font-geist);
-  font-size: var(--font-size-sm); /* 14px */
-  font-weight: var(--font-weight-base);
-  color: var(--color-text-primary);
-  line-height: 1;
-  user-select: none;
+    font-family: var(--font-geist);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-text-primary);
+    line-height: 1;
+    user-select: none;
 }
 
+/* Base Input Styles */
+.input {
+    width: 100%;
+    height: 40px;
+    padding: 0 var(--space-8);
+    background-color: transparent;
+    color: var(--color-text-primary);
+    font-family: var(--font-geist);
+    font-size: var(--font-size-sm);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-sm);
+    transition: all var(--motion-instant);
+}
+
+.input::placeholder {
+    color: var(--m-gray);
+    opacity: 0.8;
+}
+
+.input:hover:not(:disabled):not(.input-error) {
+    border-color: var(--color-border-muted);
+}
+
+.input:focus-visible {
+    outline: 0;
+    border-color: var(--color-text-primary);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+.input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: var(--color-surface-muted);
+}
+
+.input-error {
+    border-color: var(--m-red) !important;
+}
+
+/* Advanced Input Types (Date, Time) */
 .input[type="date"],
 .input[type="time"],
 .input[type="datetime-local"],
 .input[type="month"] {
     appearance: none;
     -webkit-appearance: none;
-    position: relative;
-    padding-right: 12px;
 }
-.input[type="date"]::-webkit-calendar-picker-indicator,
-.input[type="time"]::-webkit-calendar-picker-indicator {
+
+.input::-webkit-calendar-picker-indicator {
     cursor: pointer;
     opacity: 0.6;
     transition: opacity 150ms;
+    filter: invert(0); /* Default for light mode */
 }
-.input[type="date"]::-webkit-calendar-picker-indicator:hover,
-.input[type="time"]::-webkit-calendar-picker-indicator:hover {
+
+.input::-webkit-calendar-picker-indicator:hover {
     opacity: 1;
 }
 
+/* File Input Styling */
 .input-file {
     padding: 0;
     line-height: 38px;
+    overflow: hidden;
 }
+
 .input-file::file-selector-button {
     height: 100%;
     padding: 0 16px;
@@ -356,10 +398,12 @@ a {
     cursor: pointer;
     transition: background-color 150ms;
 }
+
 .input-file::file-selector-button:hover {
     background: var(--color-border-muted);
 }
 
+/* Checkbox & Radio Styles */
 .checkbox, .radio {
     appearance: none;
     width: 16px;
@@ -372,12 +416,14 @@ a {
     cursor: pointer;
     transition: background-color 150ms;
 }
+
 .checkbox { border-radius: 4px; }
 .radio { border-radius: 50%; }
 
 .checkbox:checked, .radio:checked {
     background-color: var(--color-text-primary);
 }
+
 .checkbox:checked::before {
     content: "";
     width: 10px;
@@ -385,6 +431,7 @@ a {
     background-color: var(--m-white);
     clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
 }
+
 .radio:checked::before {
     content: "";
     width: 6px;
@@ -392,33 +439,38 @@ a {
     border-radius: 50%;
     background-color: var(--m-white);
 }
+
 .checkbox:focus-visible, .radio:focus-visible {
     outline: 2px solid var(--color-text-primary);
     outline-offset: 2px;
 }
+
+/* Field Helpers */
 .checkbox-group {
     display: flex;
     align-items: center;
     gap: 8px;
 }
+
 .checkbox-label {
     font-size: 14px;
     font-weight: 500;
+    color: var(--color-text-primary);
     cursor: pointer;
     user-select: none;
 }
 
-
 .field-error-message {
-  font-size: var(--font-size-xs);
-  color: var(--m-red);
-  font-weight: 500;
+    font-size: var(--font-size-xs);
+    color: var(--m-red);
+    font-weight: 500;
+    margin-top: 2px;
 }
 
-/* Success/Description State */
 .field-description {
-  font-size: var(--font-size-xs);
-  color: var(--color-text-secondary);
+    font-size: var(--font-size-xs);
+    color: var(--m-gray);
+    margin-top: 2px;
 }
 
 .modal-overlay {
