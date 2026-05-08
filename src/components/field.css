@@ -13,6 +13,7 @@
     line-height: 1;
     user-select: none;
     transition: color var(--motion-instant);
+    display: inline-block;
 }
 
 .input {
@@ -28,11 +29,12 @@
     transition: all var(--motion-instant);
     outline: none;
     box-sizing: border-box;
+    display: block;
 }
 
 .input::placeholder {
     color: var(--m-gray);
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
 .input:hover:not(:disabled):not(.input-error) {
@@ -64,16 +66,21 @@
 
 .icon-left {
     position: absolute;
-    left: 14px;
+    left: 12px;
     top: 50%;
     transform: translateY(-50%);
     color: var(--m-gray);
     font-size: 14px;
     pointer-events: none;
     transition: color var(--motion-instant);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
 }
 
-.input:focus-visible + .icon-left {
+.relative:focus-within .icon-left {
     color: var(--color-text-primary);
 }
 
@@ -91,6 +98,7 @@
     transition: opacity 150ms;
 }
 
+body.dark .input::-webkit-calendar-picker-indicator,
 .dark .input::-webkit-calendar-picker-indicator {
     filter: invert(1);
 }
@@ -131,6 +139,7 @@
     place-content: center;
     cursor: pointer;
     transition: all 150ms;
+    flex-shrink: 0;
 }
 
 .checkbox { border-radius: 4px; }
@@ -148,8 +157,9 @@
     clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
 }
 
+body.dark .checkbox:checked::before,
 .dark .checkbox:checked::before {
-    background-color: #000;
+    background-color: var(--color-text-secondary);
 }
 
 .radio:checked::before {
@@ -160,8 +170,9 @@
     background-color: var(--m-white);
 }
 
+body.dark .radio:checked::before,
 .dark .radio:checked::before {
-    background-color: #000;
+    background-color: var(--color-text-secondary);
 }
 
 .checkbox-group {
@@ -194,7 +205,7 @@
 
 @media (max-width: 640px) {
     .input {
-        font-size: 16px; /* Prevents iOS auto-zoom */
+        font-size: 16px;
     }
     .checkbox-group {
         gap: 12px;
