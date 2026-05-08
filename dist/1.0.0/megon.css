@@ -414,92 +414,95 @@ body.dark, .dark {
     border: none;
 }
 
+/* Megon UI: Future-Proof Field & Input Components */
+
 .field-group {
     display: flex;
     flex-direction: column;
-    gap: var(--space-3);
+    gap: var(--space-3, 4px);
     width: 100%;
 }
 
 .label {
     font-family: var(--font-geist);
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-sm, 14px);
     font-weight: 500;
-    color: var(--color-text-primary);
+    color: var(--color-text-primary, #09090b);
     line-height: 1;
+    margin-bottom: 6px;
     user-select: none;
-    transition: color var(--motion-instant);
+    transition: color var(--motion-instant, 150ms);
     display: inline-block;
 }
 
-.input {
+/* Wrapper to hold Input and Icon together */
+.relative {
+    position: relative !important;
     width: 100%;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.input {
+    width: 100% !important;
     height: 40px;
-    padding: 0 12px;
+    padding: 0 12px; /* Default Padding */
     background-color: transparent;
-    color: var(--color-text-primary);
+    color: var(--color-text-primary, #09090b);
     font-family: var(--font-geist);
-    font-size: var(--font-size-sm);
-    border: 1px solid var(--color-border-default);
-    border-radius: var(--radius-xs);
-    transition: all var(--motion-instant);
+    font-size: var(--font-size-sm, 14px);
+    border: 1px solid var(--color-border-default, #e4e4e7);
+    border-radius: var(--radius-xs, 6px);
+    transition: all var(--motion-instant, 150ms);
     outline: none;
-    box-sizing: border-box;
+    box-sizing: border-box !important; /* Forces padding to stay inside */
     display: block;
 }
 
 .input::placeholder {
-    color: var(--m-gray);
+    color: var(--m-gray, #71717a);
     opacity: 0.5;
 }
 
-.input:hover:not(:disabled):not(.input-error) {
-    border-color: var(--color-border-muted);
-}
-
-.input:focus-visible {
-    border-color: var(--color-text-primary);
-    box-shadow: 0 0 0 1px var(--color-text-primary);
-}
-
-.input:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    background-color: var(--color-surface-muted);
-}
-
-.input-error {
-    border-color: var(--m-red) !important;
-}
-
-.input-error:focus-visible {
-    box-shadow: 0 0 0 1px var(--m-red) !important;
-}
-
+/* Icon Support Inside Input */
 .input-with-icon-left {
-    padding-left: 38px !important;
+    padding-left: 40px !important; /* Fixed padding for icons */
 }
 
 .icon-left {
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--m-gray);
+    position: absolute !important;
+    left: 14px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    color: var(--m-gray, #71717a);
     font-size: 14px;
     pointer-events: none;
-    transition: color var(--motion-instant);
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 16px;
-    height: 16px;
+}
+
+/* Focus States */
+.input:focus-visible {
+    border-color: var(--color-text-primary, #09090b);
+    box-shadow: 0 0 0 1px var(--color-text-primary, #09090b);
 }
 
 .relative:focus-within .icon-left {
-    color: var(--color-text-primary);
+    color: var(--color-text-primary, #09090b);
 }
 
+/* Error States */
+.input-error {
+    border-color: var(--m-red, #ef4444) !important;
+}
+
+.input-error:focus-visible {
+    box-shadow: 0 0 0 1px var(--m-red, #ef4444) !important;
+}
+
+/* Advanced Inputs & Dark Mode Calendar */
 .input[type="date"],
 .input[type="time"],
 .input[type="datetime-local"],
@@ -511,7 +514,6 @@ body.dark, .dark {
 .input::-webkit-calendar-picker-indicator {
     cursor: pointer;
     opacity: 0.6;
-    transition: opacity 150ms;
 }
 
 body.dark .input::-webkit-calendar-picker-indicator,
@@ -519,63 +521,32 @@ body.dark .input::-webkit-calendar-picker-indicator,
     filter: invert(1);
 }
 
-.input-file {
-    padding: 0;
-    line-height: 38px;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.input-file::file-selector-button {
-    height: 100%;
-    padding: 0 16px;
-    margin-right: 12px;
-    background: var(--color-surface-muted);
-    border: none;
-    border-right: 1px solid var(--color-border-default);
-    color: var(--color-text-primary);
-    font-weight: 500;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 150ms;
-}
-
-.input-file::file-selector-button:hover {
-    background: var(--color-border-muted);
-}
-
+/* Checkbox & Radio */
 .checkbox, .radio {
     appearance: none;
     width: 16px;
     height: 16px;
-    border: 1px solid var(--color-text-primary);
+    border: 1px solid var(--color-text-primary, #09090b);
     background-color: transparent;
-    margin: 0;
-    display: grid;
-    place-content: center;
     cursor: pointer;
     transition: all 150ms;
     flex-shrink: 0;
+    margin: 0;
 }
 
 .checkbox { border-radius: 4px; }
 .radio { border-radius: 50%; }
 
 .checkbox:checked, .radio:checked {
-    background-color: var(--color-text-primary);
+    background-color: var(--color-text-primary, #09090b);
 }
 
 .checkbox:checked::before {
     content: "";
     width: 10px;
     height: 10px;
-    background-color: var(--m-white);
+    background-color: var(--m-white, #fff);
     clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-}
-
-body.dark .checkbox:checked::before,
-.dark .checkbox:checked::before {
-    background-color: var(--color-text-secondary);
 }
 
 .radio:checked::before {
@@ -583,48 +554,35 @@ body.dark .checkbox:checked::before,
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background-color: var(--m-white);
+    background-color: var(--m-white, #fff);
 }
 
+body.dark .checkbox:checked::before,
 body.dark .radio:checked::before,
+.dark .checkbox:checked::before,
 .dark .radio:checked::before {
-    background-color: var(--color-text-secondary);
+    background-color: var(--color-text-secondary, #fff);
 }
 
-.checkbox-group {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.checkbox-label {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--color-text-primary);
-    cursor: pointer;
-    user-select: none;
-}
-
+/* Helpers */
 .field-error-message {
     font-size: 12px;
-    color: var(--m-red);
+    color: var(--m-red, #ef4444);
     font-weight: 500;
     margin-top: 4px;
 }
 
 .field-description {
     font-size: 12px;
-    color: var(--m-gray);
+    color: var(--m-gray, #71717a);
     margin-top: 4px;
     line-height: 1.4;
 }
 
+/* Responsive Zoom Fix */
 @media (max-width: 640px) {
     .input {
-        font-size: 16px;
-    }
-    .checkbox-group {
-        gap: 12px;
+        font-size: 16px; /* Prevents auto-zoom on iOS */
     }
 }
 
