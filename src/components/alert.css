@@ -1,0 +1,40 @@
+.alert {
+    position: relative;
+    width: 100%;
+    padding: 16px;
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background-color: transparent;
+}
+.alert-icon {
+    margin-top: 2px;
+    color: var(--color-text-primary);
+    font-size: 16px;
+}
+.alert-content {
+    flex: 1;
+}
+.alert-title {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 4px;
+    line-height: 1;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+}
+.alert-desc {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+}
+.alert-destructive {
+    border-color: var(--m-red);
+}
+.alert-destructive .alert-icon,
+.alert-destructive .alert-title,
+.alert-destructive .alert-desc {
+    color: var(--m-red);
+}
