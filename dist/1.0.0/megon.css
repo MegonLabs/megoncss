@@ -109,36 +109,70 @@ a {
     display: flex;
     align-items: flex-start;
     gap: 12px;
-    background-color: transparent;
+    background-color: var(--m-bg);
+    transition: all var(--motion-instant);
+    box-sizing: border-box;
 }
+
 .alert-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 2px;
     color: var(--color-text-primary);
     font-size: 16px;
+    flex-shrink: 0;
 }
+
 .alert-content {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
+
 .alert-title {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 14px;
-    margin-bottom: 4px;
     line-height: 1;
     color: var(--color-text-primary);
     letter-spacing: -0.02em;
+    margin: 0;
 }
+
 .alert-desc {
     font-size: 14px;
-    color: var(--color-text-secondary);
+    color: var(--m-gray);
     line-height: 1.4;
+    margin: 0;
 }
+
+/* Destructive Variant - Fixed and Professional */
 .alert-destructive {
-    border-color: var(--m-red);
+    border-color: var(--m-red) !important;
+    background-color: transparent;
 }
+
 .alert-destructive .alert-icon,
 .alert-destructive .alert-title,
 .alert-destructive .alert-desc {
-    color: var(--m-red);
+    color: var(--m-red) !important;
+}
+
+/* Success Variant (Optional but Good for UI) */
+.alert-success {
+    border-color: #10b981 !important;
+}
+
+.alert-success .alert-icon,
+.alert-success .alert-title {
+    color: #10b981 !important;
+}
+
+/* Dark Mode logic handle */
+.dark .alert {
+    background-color: var(--m-bg);
+    border-color: var(--m-border);
 }
 
 .badge {
