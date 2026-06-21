@@ -1,0 +1,15 @@
+node_modules/
+dist/
+target/
+*.wasm
+.DS_Store
+.env
+*.log
+.cache/
+*.tsbuildinfo
+
+# Rust
+target/
+
+# pnpm
+.pnpm-store

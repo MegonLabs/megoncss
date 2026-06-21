@@ -1,0 +1,341 @@
+/* MegonCSS Spacing Utilities */
+/* Exact Pixel: pad-16 = padding: 16px */
+
+/* ─── Padding — All Sides ─── */
+.pad-0 {
+  padding: var(--sp-0);
+}
+.pad-4 {
+  padding: var(--sp-4);
+}
+.pad-8 {
+  padding: var(--sp-8);
+}
+.pad-12 {
+  padding: var(--sp-12);
+}
+.pad-16 {
+  padding: var(--sp-16);
+}
+.pad-20 {
+  padding: var(--sp-20);
+}
+.pad-24 {
+  padding: var(--sp-24);
+}
+.pad-32 {
+  padding: var(--sp-32);
+}
+.pad-40 {
+  padding: var(--sp-40);
+}
+.pad-48 {
+  padding: var(--sp-48);
+}
+.pad-64 {
+  padding: var(--sp-64);
+}
+
+/* ─── Padding — X Axis (left + right) ─── */
+.pad-x-0 {
+  padding-left: var(--sp-0);
+  padding-right: var(--sp-0);
+}
+.pad-x-4 {
+  padding-left: var(--sp-4);
+  padding-right: var(--sp-4);
+}
+.pad-x-8 {
+  padding-left: var(--sp-8);
+  padding-right: var(--sp-8);
+}
+.pad-x-12 {
+  padding-left: var(--sp-12);
+  padding-right: var(--sp-12);
+}
+.pad-x-16 {
+  padding-left: var(--sp-16);
+  padding-right: var(--sp-16);
+}
+.pad-x-24 {
+  padding-left: var(--sp-24);
+  padding-right: var(--sp-24);
+}
+.pad-x-32 {
+  padding-left: var(--sp-32);
+  padding-right: var(--sp-32);
+}
+
+/* ─── Padding — Y Axis (top + bottom) ─── */
+.pad-y-0 {
+  padding-top: var(--sp-0);
+  padding-bottom: var(--sp-0);
+}
+.pad-y-4 {
+  padding-top: var(--sp-4);
+  padding-bottom: var(--sp-4);
+}
+.pad-y-8 {
+  padding-top: var(--sp-8);
+  padding-bottom: var(--sp-8);
+}
+.pad-y-12 {
+  padding-top: var(--sp-12);
+  padding-bottom: var(--sp-12);
+}
+.pad-y-16 {
+  padding-top: var(--sp-16);
+  padding-bottom: var(--sp-16);
+}
+.pad-y-24 {
+  padding-top: var(--sp-24);
+  padding-bottom: var(--sp-24);
+}
+.pad-y-32 {
+  padding-top: var(--sp-32);
+  padding-bottom: var(--sp-32);
+}
+
+/* ─── Padding — Directional ─── */
+.pad-t-4 {
+  padding-top: var(--sp-4);
+}
+.pad-t-8 {
+  padding-top: var(--sp-8);
+}
+.pad-t-12 {
+  padding-top: var(--sp-12);
+}
+.pad-t-16 {
+  padding-top: var(--sp-16);
+}
+.pad-t-24 {
+  padding-top: var(--sp-24);
+}
+.pad-t-32 {
+  padding-top: var(--sp-32);
+}
+
+.pad-b-4 {
+  padding-bottom: var(--sp-4);
+}
+.pad-b-8 {
+  padding-bottom: var(--sp-8);
+}
+.pad-b-12 {
+  padding-bottom: var(--sp-12);
+}
+.pad-b-16 {
+  padding-bottom: var(--sp-16);
+}
+.pad-b-24 {
+  padding-bottom: var(--sp-24);
+}
+.pad-b-32 {
+  padding-bottom: var(--sp-32);
+}
+
+.pad-l-4 {
+  padding-left: var(--sp-4);
+}
+.pad-l-8 {
+  padding-left: var(--sp-8);
+}
+.pad-l-12 {
+  padding-left: var(--sp-12);
+}
+.pad-l-16 {
+  padding-left: var(--sp-16);
+}
+.pad-l-24 {
+  padding-left: var(--sp-24);
+}
+
+.pad-r-4 {
+  padding-right: var(--sp-4);
+}
+.pad-r-8 {
+  padding-right: var(--sp-8);
+}
+.pad-r-12 {
+  padding-right: var(--sp-12);
+}
+.pad-r-16 {
+  padding-right: var(--sp-16);
+}
+.pad-r-24 {
+  padding-right: var(--sp-24);
+}
+
+/* ─── Margin — All Sides ─── */
+.mar-0 {
+  margin: var(--sp-0);
+}
+.mar-4 {
+  margin: var(--sp-4);
+}
+.mar-8 {
+  margin: var(--sp-8);
+}
+.mar-12 {
+  margin: var(--sp-12);
+}
+.mar-16 {
+  margin: var(--sp-16);
+}
+.mar-20 {
+  margin: var(--sp-20);
+}
+.mar-24 {
+  margin: var(--sp-24);
+}
+.mar-32 {
+  margin: var(--sp-32);
+}
+.mar-40 {
+  margin: var(--sp-40);
+}
+.mar-48 {
+  margin: var(--sp-48);
+}
+.mar-64 {
+  margin: var(--sp-64);
+}
+
+.mar-x-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ─── Margin — X Axis ─── */
+.mar-x-4 {
+  margin-left: var(--sp-4);
+  margin-right: var(--sp-4);
+}
+.mar-x-8 {
+  margin-left: var(--sp-8);
+  margin-right: var(--sp-8);
+}
+.mar-x-16 {
+  margin-left: var(--sp-16);
+  margin-right: var(--sp-16);
+}
+.mar-x-24 {
+  margin-left: var(--sp-24);
+  margin-right: var(--sp-24);
+}
+
+/* ─── Margin — Y Axis ─── */
+.mar-y-4 {
+  margin-top: var(--sp-4);
+  margin-bottom: var(--sp-4);
+}
+.mar-y-8 {
+  margin-top: var(--sp-8);
+  margin-bottom: var(--sp-8);
+}
+.mar-y-16 {
+  margin-top: var(--sp-16);
+  margin-bottom: var(--sp-16);
+}
+.mar-y-24 {
+  margin-top: var(--sp-24);
+  margin-bottom: var(--sp-24);
+}
+
+/* ─── Margin — Directional ─── */
+.mar-t-4 {
+  margin-top: var(--sp-4);
+}
+.mar-t-8 {
+  margin-top: var(--sp-8);
+}
+.mar-t-12 {
+  margin-top: var(--sp-12);
+}
+.mar-t-16 {
+  margin-top: var(--sp-16);
+}
+.mar-t-24 {
+  margin-top: var(--sp-24);
+}
+.mar-t-32 {
+  margin-top: var(--sp-32);
+}
+
+.mar-b-4 {
+  margin-bottom: var(--sp-4);
+}
+.mar-b-8 {
+  margin-bottom: var(--sp-8);
+}
+.mar-b-12 {
+  margin-bottom: var(--sp-12);
+}
+.mar-b-16 {
+  margin-bottom: var(--sp-16);
+}
+.mar-b-24 {
+  margin-bottom: var(--sp-24);
+}
+.mar-b-32 {
+  margin-bottom: var(--sp-32);
+}
+
+.mar-l-4 {
+  margin-left: var(--sp-4);
+}
+.mar-l-8 {
+  margin-left: var(--sp-8);
+}
+.mar-l-12 {
+  margin-left: var(--sp-12);
+}
+.mar-l-16 {
+  margin-left: var(--sp-16);
+}
+.mar-l-24 {
+  margin-left: var(--sp-24);
+}
+
+.mar-r-4 {
+  margin-right: var(--sp-4);
+}
+.mar-r-8 {
+  margin-right: var(--sp-8);
+}
+.mar-r-12 {
+  margin-right: var(--sp-12);
+}
+.mar-r-16 {
+  margin-right: var(--sp-16);
+}
+.mar-r-24 {
+  margin-right: var(--sp-24);
+}
+
+/* ─── Gap ─── */
+.gap-0 {
+  gap: var(--sp-0);
+}
+.gap-4 {
+  gap: var(--sp-4);
+}
+.gap-8 {
+  gap: var(--sp-8);
+}
+.gap-12 {
+  gap: var(--sp-12);
+}
+.gap-16 {
+  gap: var(--sp-16);
+}
+.gap-20 {
+  gap: var(--sp-20);
+}
+.gap-24 {
+  gap: var(--sp-24);
+}
+.gap-32 {
+  gap: var(--sp-32);
+}

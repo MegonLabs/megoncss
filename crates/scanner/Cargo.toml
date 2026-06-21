@@ -1,0 +1,8 @@
+[package]
+name = "megoncss-scanner"
+version = "0.1.0"
+edition = "2024"
+description = "MegonCSS HTML class scanner — extracts utility class names from HTML"
+
+[dependencies]
+regex = "1"

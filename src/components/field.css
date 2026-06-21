@@ -1,0 +1,123 @@
+/* MegonCSS Form Field Component */
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.label {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1;
+  user-select: none;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  background-color: transparent;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-6);
+  transition: all var(--motion-fast);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input::placeholder {
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+.input:focus-visible {
+  border-color: var(--color-blue);
+  box-shadow: 0 0 0 1px var(--color-blue);
+}
+
+.input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--bg-muted);
+}
+
+.input-error {
+  border-color: var(--color-red) !important;
+}
+
+.input-error:focus-visible {
+  box-shadow: 0 0 0 1px var(--color-red) !important;
+}
+
+.field-error-msg {
+  font-size: 12px;
+  color: var(--color-red);
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.field-desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+/* Checkbox & Radio */
+.checkbox,
+.radio {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--text-primary);
+  background-color: transparent;
+  cursor: pointer;
+  transition: all var(--motion-fast);
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.checkbox {
+  border-radius: 4px;
+}
+.radio {
+  border-radius: 50%;
+}
+
+.checkbox:checked,
+.radio:checked {
+  background-color: var(--color-blue);
+  border-color: var(--color-blue);
+}
+
+.checkbox:checked::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 2px;
+  background-color: white;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.radio:checked::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  margin: 4px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+@media (max-width: 640px) {
+  .input {
+    font-size: 16px;
+  }
+}

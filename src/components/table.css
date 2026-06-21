@@ -1,0 +1,34 @@
+/* MegonCSS Table Component */
+
+.megon-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.megon-table th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding: 12px;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.megon-table td {
+  padding: 12px;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border-default);
+  color: var(--text-primary);
+}
+
+.megon-table tr:last-child td {
+  border-bottom: none;
+}
+
+.megon-table-striped tbody tr:nth-child(odd) {
+  background-color: var(--bg-muted);
+}
+
+.megon-table-hover tbody tr:hover {
+  background-color: var(--bg-secondary);
+}

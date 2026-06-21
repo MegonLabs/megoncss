@@ -1,0 +1,27 @@
+{
+  "name": "megoncss",
+  "version": "2.0.0-alpha.1",
+  "description": "Exact Pixel CSS Framework — pad-16 = 16px. Zero guessing.",
+  "main": "dist/megon.css",
+  "style": "dist/megon.css",
+  "unpkg": "dist/megon.min.css",
+  "jsdelivr": "dist/megon.min.css",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "postcss ../../src/megon.css -o dist/megon.css && cleancss -o dist/megon.min.css dist/megon.css"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "utility-first",
+    "atomic",
+    "exact-pixel"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MegonLabs/megoncss.git"
+  }
+}

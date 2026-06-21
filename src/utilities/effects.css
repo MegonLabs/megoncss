@@ -1,0 +1,121 @@
+/* MegonCSS Effects Utilities */
+
+/* ─── Border Radius — Exact Pixel ─── */
+.round-0 {
+  border-radius: var(--radius-0);
+}
+.round-4 {
+  border-radius: var(--radius-4);
+}
+.round-6 {
+  border-radius: var(--radius-6);
+}
+.round-8 {
+  border-radius: var(--radius-8);
+}
+.round-12 {
+  border-radius: var(--radius-12);
+}
+.round-16 {
+  border-radius: var(--radius-16);
+}
+.round-full {
+  border-radius: var(--radius-full);
+}
+
+/* ─── Border ─── */
+.border {
+  border: 1px solid var(--border-default);
+}
+.border-0 {
+  border: none;
+}
+.border-2 {
+  border-width: 2px;
+}
+.border-b {
+  border-bottom: 1px solid var(--border-default);
+}
+.border-t {
+  border-top: 1px solid var(--border-default);
+}
+.border-l {
+  border-left: 1px solid var(--border-default);
+}
+.border-r {
+  border-right: 1px solid var(--border-default);
+}
+.border-b-0 {
+  border-bottom: none;
+}
+
+/* ─── Box Shadow ─── */
+.shadow-sm {
+  box-shadow: var(--shadow-sm);
+}
+.shadow {
+  box-shadow: var(--shadow);
+}
+.shadow-md {
+  box-shadow: var(--shadow-md);
+}
+.shadow-lg {
+  box-shadow: var(--shadow-lg);
+}
+.shadow-none {
+  box-shadow: none;
+}
+
+/* ─── Opacity ─── */
+.opacity-0 {
+  opacity: 0;
+}
+.opacity-10 {
+  opacity: 0.1;
+}
+.opacity-20 {
+  opacity: 0.2;
+}
+.opacity-30 {
+  opacity: 0.3;
+}
+.opacity-40 {
+  opacity: 0.4;
+}
+.opacity-50 {
+  opacity: 0.5;
+}
+.opacity-60 {
+  opacity: 0.6;
+}
+.opacity-70 {
+  opacity: 0.7;
+}
+.opacity-80 {
+  opacity: 0.8;
+}
+.opacity-90 {
+  opacity: 0.9;
+}
+.opacity-100 {
+  opacity: 1;
+}
+
+/* ─── Transition ─── */
+.transition {
+  transition: all var(--motion-fast);
+}
+.transition-slow {
+  transition: all var(--motion-slow);
+}
+
+/* ─── Scale ─── */
+.scale-95 {
+  transform: scale(0.95);
+}
+.scale-100 {
+  transform: scale(1);
+}
+.scale-105 {
+  transform: scale(1.05);
+}

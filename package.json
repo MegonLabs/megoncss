@@ -1,0 +1,29 @@
+{
+  "name": "megoncss-monorepo",
+  "private": true,
+  "scripts": {
+    "build": "pnpm --recursive build",
+    "build:css": "postcss src/megon.css -o packages/megoncss/dist/megon.css",
+    "build:rust": "cd crates/node && napi build --platform --release",
+    "test": "pnpm --recursive test",
+    "lint": "pnpm --recursive lint",
+    "format": "prettier --write .",
+    "changeset": "changeset",
+    "release": "changeset publish"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MegonLabs/megoncss.git"
+  },
+  "author": "Niloy",
+  "license": "MIT"
+}

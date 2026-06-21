@@ -1,0 +1,18 @@
+{
+  "name": "@megoncss/browser",
+  "version": "2.0.0-alpha.1",
+  "description": "MegonCSS browser/CDN build — JIT class scanning in the browser",
+  "main": "./dist/megon.js",
+  "browser": "./dist/megon.js",
+  "scripts": {
+    "build": "tsc && esbuild src/index.ts --bundle --minify --outfile=dist/megon.js",
+    "dev": "esbuild src/index.ts --bundle --outfile=dist/megon.js --watch"
+  },
+  "files": [
+    "dist/"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@megoncss/core": "workspace:*"
+  }
+}

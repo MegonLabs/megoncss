@@ -1,0 +1,17 @@
+[package]
+name = "megoncss-node"
+version = "0.1.0"
+edition = "2024"
+description = "MegonCSS NAPI-RS bindings for Node.js"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+megoncss-scanner = { path = "../scanner" }
+megoncss-generator = { path = "../generator" }
+napi = { version = "2", features = ["napi4"] }
+napi-derive = "2"
+
+[build-dependencies]
+napi-build = "2"

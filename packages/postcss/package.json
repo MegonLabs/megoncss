@@ -1,0 +1,19 @@
+{
+  "name": "@megoncss/postcss",
+  "version": "2.0.0-alpha.1",
+  "description": "PostCSS plugin for MegonCSS",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run"
+  },
+  "files": [
+    "dist/"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "postcss": "^8.5.0",
+    "@megoncss/core": "workspace:*"
+  }
+}
