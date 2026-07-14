@@ -1,14 +1,27 @@
 /* MegonCSS Dark Mode Theme */
 
 .dark {
-  --bg-primary: #0f172a;
-  --bg-secondary: #1e293b;
-  --bg-muted: #334155;
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --border-default: #334155;
-  --border-muted: #1e293b;
+  --bg-primary: #030712; /* zinc/slate 950 feel */
+  --bg-secondary: #0b0f19;
+  --bg-muted: #1e293b;
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --text-muted: #9ca3af;
+  --border-default: #1f2937;
+  --border-muted: #111827;
+
+  /* ─── Shadcn dark semantic tokens ─── */
+  --primary: var(--color-white);
+  --primary-foreground: var(--color-gray-950);
+  --secondary: var(--color-gray-800);
+  --secondary-foreground: var(--color-gray-50);
+  --muted: var(--color-gray-800);
+  --muted-foreground: var(--color-gray-400);
+  --accent: var(--color-gray-800);
+  --accent-foreground: var(--color-gray-50);
+  --destructive: var(--color-red-700);
+  --destructive-foreground: var(--color-white);
+  --ring: var(--color-blue-500);
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
@@ -30,23 +43,25 @@ body.dark {
    ═══════════════════════════════════════════ */
 
 .dark .btn-secondary {
-  background-color: var(--bg-muted);
-  color: var(--text-primary);
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
 }
 .dark .btn-secondary:hover {
-  background-color: #475569;
+  opacity: 0.9;
 }
 
 .dark .btn-outline {
-  border-color: #475569;
+  border-color: var(--border-default);
   color: var(--text-primary);
 }
 .dark .btn-outline:hover {
-  background-color: var(--bg-muted);
+  background-color: var(--accent);
+  color: var(--accent-foreground);
 }
 
 .dark .btn-ghost:hover {
-  background-color: var(--bg-muted);
+  background-color: var(--accent);
+  color: var(--accent-foreground);
 }
 
 .dark .btn-warning {
@@ -158,7 +173,7 @@ body.dark {
 
 .dark .alert-error {
   background-color: rgba(239, 68, 68, 0.1);
-  border-color: rgba(239, 68, 68, 0.4);
+  border-color: rgba(239, 68, 68, 0.3) !important;
 }
 .dark .alert-error .alert-icon,
 .dark .alert-error .alert-title,
@@ -168,7 +183,7 @@ body.dark {
 
 .dark .alert-success {
   background-color: rgba(34, 197, 94, 0.1);
-  border-color: rgba(34, 197, 94, 0.4);
+  border-color: rgba(34, 197, 94, 0.3) !important;
 }
 .dark .alert-success .alert-icon,
 .dark .alert-success .alert-title,
@@ -178,7 +193,7 @@ body.dark {
 
 .dark .alert-warning {
   background-color: rgba(234, 179, 8, 0.1);
-  border-color: rgba(234, 179, 8, 0.4);
+  border-color: rgba(234, 179, 8, 0.3) !important;
 }
 .dark .alert-warning .alert-icon,
 .dark .alert-warning .alert-title,
@@ -188,7 +203,7 @@ body.dark {
 
 .dark .alert-info {
   background-color: rgba(59, 130, 246, 0.1);
-  border-color: rgba(59, 130, 246, 0.4);
+  border-color: rgba(59, 130, 246, 0.3) !important;
 }
 .dark .alert-info .alert-icon,
 .dark .alert-info .alert-title,
@@ -214,7 +229,7 @@ body.dark {
 }
 
 .dark .input:focus-visible {
-  border-color: var(--color-blue);
+  border-color: var(--ring);
 }
 
 .dark .input:disabled {

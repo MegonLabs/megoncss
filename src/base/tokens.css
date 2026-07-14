@@ -162,6 +162,47 @@
   --color-teal-900: #134e4a;
   --color-teal-950: #042f2e;
 
+  /* ─── Base Color Mapping (Fix Omission) ─── */
+  --color-blue: var(--color-blue-500);
+  --color-blue-dark: var(--color-blue-700);
+  --color-blue-light: var(--color-blue-100);
+
+  --color-red: var(--color-red-500);
+  --color-red-dark: var(--color-red-700);
+  --color-red-light: var(--color-red-100);
+
+  --color-green: var(--color-green-500);
+  --color-green-dark: var(--color-green-700);
+  --color-green-light: var(--color-green-100);
+
+  --color-yellow: var(--color-yellow-500);
+  --color-yellow-dark: var(--color-yellow-700);
+  --color-yellow-light: var(--color-yellow-100);
+
+  --color-orange: var(--color-orange-500);
+  --color-orange-dark: var(--color-orange-700);
+  --color-orange-light: var(--color-orange-100);
+
+  --color-amber: var(--color-amber-500);
+  --color-amber-dark: var(--color-amber-700);
+  --color-amber-light: var(--color-amber-100);
+
+  --color-purple: var(--color-purple-500);
+  --color-purple-dark: var(--color-purple-700);
+  --color-purple-light: var(--color-purple-100);
+
+  --color-pink: var(--color-pink-500);
+  --color-pink-dark: var(--color-pink-700);
+  --color-pink-light: var(--color-pink-100);
+
+  --color-indigo: var(--color-indigo-500);
+  --color-indigo-dark: var(--color-indigo-700);
+  --color-indigo-light: var(--color-indigo-100);
+
+  --color-teal: var(--color-teal-500);
+  --color-teal-dark: var(--color-teal-700);
+  --color-teal-light: var(--color-teal-100);
+
   /* ─── Semantic Tokens ─── */
   --bg-primary: #ffffff;
   --bg-secondary: #f9fafb;
@@ -171,6 +212,19 @@
   --text-muted: #9ca3af;
   --border-default: #e5e7eb;
   --border-muted: #f3f4f6;
+
+  /* ─── Shadcn-inspired Premium Semantic Tokens ─── */
+  --primary: var(--color-gray-900);
+  --primary-foreground: var(--color-white);
+  --secondary: var(--color-gray-100);
+  --secondary-foreground: var(--color-gray-900);
+  --muted: var(--color-gray-100);
+  --muted-foreground: var(--color-gray-500);
+  --accent: var(--color-gray-100);
+  --accent-foreground: var(--color-gray-900);
+  --destructive: var(--color-red-600);
+  --destructive-foreground: var(--color-white);
+  --ring: var(--color-blue-500);
 
   /* ─── Typography ─── */
   --font-sans:
