@@ -7,10 +7,10 @@
   font-size: 11px;
   font-weight: 600;
   border-radius: var(--radius-full);
-  background-color: var(--bg-muted);
-  color: var(--text-primary);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  text-transform: none;
+  letter-spacing: normal;
   line-height: 1.4;
 }
 
@@ -32,58 +32,58 @@
 
 /* ─── Color Variants ─── */
 .badge-blue {
-  background-color: var(--color-blue-light);
-  color: var(--color-blue-dark);
+  background-color: rgba(59, 130, 246, 0.1);
+  color: var(--color-blue-600);
 }
 
 .badge-red {
-  background-color: var(--color-red-light);
-  color: var(--color-red-dark);
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--color-red-600);
 }
 
 .badge-green {
-  background-color: var(--color-green-light);
-  color: var(--color-green-dark);
+  background-color: rgba(34, 197, 94, 0.1);
+  color: var(--color-green-600);
 }
 
 .badge-yellow {
-  background-color: var(--color-yellow-light);
-  color: #92400e;
+  background-color: rgba(234, 179, 8, 0.1);
+  color: var(--color-yellow-600);
 }
 
 .badge-orange {
-  background-color: var(--color-orange-light);
-  color: #9a3412;
+  background-color: rgba(249, 115, 22, 0.1);
+  color: var(--color-orange-600);
 }
 
 .badge-purple {
-  background-color: var(--color-purple-light);
-  color: #6b21a8;
+  background-color: rgba(168, 85, 247, 0.1);
+  color: var(--color-purple-600);
 }
 
 .badge-pink {
-  background-color: var(--color-pink-light);
-  color: #be185d;
+  background-color: rgba(236, 72, 153, 0.1);
+  color: var(--color-pink-600);
 }
 
 .badge-indigo {
-  background-color: var(--color-indigo-light);
-  color: #3730a3;
+  background-color: rgba(99, 102, 241, 0.1);
+  color: var(--color-indigo-600);
 }
 
 .badge-teal {
-  background-color: var(--color-teal-light);
-  color: #115e59;
+  background-color: rgba(20, 184, 166, 0.1);
+  color: var(--color-teal-600);
 }
 
 .badge-amber {
-  background-color: var(--color-amber-light);
-  color: #92400e;
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--color-amber-600);
 }
 
 .badge-slate {
-  background-color: var(--slate-100);
-  color: var(--slate-700);
+  background-color: rgba(100, 116, 139, 0.1);
+  color: var(--color-slate-600);
 }
 
 /* ─── Outline Variants ─── */

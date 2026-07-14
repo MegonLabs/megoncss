@@ -38,8 +38,8 @@
 }
 
 .input:focus-visible {
-  border-color: var(--color-blue);
-  box-shadow: 0 0 0 1px var(--color-blue);
+  border-color: var(--ring);
+  box-shadow: 0 0 0 2px var(--ring);
 }
 
 .input:disabled {
@@ -49,11 +49,11 @@
 }
 
 .input-error {
-  border-color: var(--color-red) !important;
+  border-color: var(--destructive) !important;
 }
 
 .input-error:focus-visible {
-  box-shadow: 0 0 0 1px var(--color-red) !important;
+  box-shadow: 0 0 0 2px var(--destructive) !important;
 }
 
 .input-success {
@@ -61,7 +61,7 @@
 }
 
 .input-success:focus-visible {
-  box-shadow: 0 0 0 1px var(--color-green) !important;
+  box-shadow: 0 0 0 2px var(--color-green) !important;
 }
 
 /* ─── Select ─── */
@@ -86,8 +86,8 @@
 }
 
 .select:focus-visible {
-  border-color: var(--color-blue);
-  box-shadow: 0 0 0 1px var(--color-blue);
+  border-color: var(--ring);
+  box-shadow: 0 0 0 2px var(--ring);
 }
 
 .select:disabled {
@@ -120,8 +120,8 @@
 }
 
 .textarea:focus-visible {
-  border-color: var(--color-blue);
-  box-shadow: 0 0 0 1px var(--color-blue);
+  border-color: var(--ring);
+  box-shadow: 0 0 0 2px var(--ring);
 }
 
 .textarea:disabled {
@@ -199,7 +199,7 @@
 /* ─── Field States ─── */
 .field-error-msg {
   font-size: 12px;
-  color: var(--color-red);
+  color: var(--destructive);
   font-weight: 500;
   margin-top: 4px;
 }
@@ -241,8 +241,8 @@
 
 .checkbox:checked,
 .radio:checked {
-  background-color: var(--color-blue);
-  border-color: var(--color-blue);
+  background-color: var(--primary);
+  border-color: var(--primary);
 }
 
 .checkbox:checked::before {
@@ -312,8 +312,8 @@
 }
 
 .switch:checked {
-  background-color: var(--color-blue);
-  border-color: var(--color-blue);
+  background-color: var(--primary);
+  border-color: var(--primary);
 }
 
 .switch:checked::before {
