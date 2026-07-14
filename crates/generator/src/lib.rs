@@ -156,10 +156,11 @@ pub fn class_to_css(class: &str) -> Option<CssRule> {
 
 fn spacing_rule(prop: &str, val: &str) -> Option<CssRule> {
     let v: u32 = val.parse().ok()?;
-    let class_name = if prop == "padding" {
-        format!("pad-{}", val)
-    } else {
-        format!("mar-{}", val)
+    let class_name = match prop {
+        "padding" => format!("pad-{}", val),
+        "margin" => format!("mar-{}", val),
+        "gap" => format!("gap-{}", val),
+        _ => format!("{}-{}", prop, val),
     };
     Some(CssRule {
         selector: format!(".{}", class_name),

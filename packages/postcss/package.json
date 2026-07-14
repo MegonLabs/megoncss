@@ -1,19 +1,33 @@
 {
   "name": "@megoncss/postcss",
-  "version": "2.0.0-alpha.1",
-  "description": "PostCSS plugin for MegonCSS",
+  "version": "1.0.0",
+  "description": "PostCSS plugin for MegonCSS — scan content, generate utility CSS",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "vitest run"
+    "test": "vitest run",
+    "dev": "tsc --watch"
   },
   "files": [
     "dist/"
   ],
+  "keywords": [
+    "postcss",
+    "postcss-plugin",
+    "css",
+    "utility",
+    "megoncss"
+  ],
   "license": "MIT",
   "dependencies": {
-    "postcss": "^8.5.0",
     "@megoncss/core": "workspace:*"
+  },
+  "peerDependencies": {
+    "postcss": "^8.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "typescript": "^5.9.3"
   }
 }

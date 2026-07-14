@@ -1,6 +1,6 @@
 {
   "name": "megoncss",
-  "version": "2.0.0-alpha.1",
+  "version": "1.0.0",
   "description": "Exact Pixel CSS Framework — pad-16 = 16px. Zero guessing.",
   "main": "dist/megon.css",
   "style": "dist/megon.css",
@@ -10,7 +10,7 @@
     "dist/"
   ],
   "scripts": {
-    "build": "postcss ../../src/megon.css -o dist/megon.css && cleancss -o dist/megon.min.css dist/megon.css"
+    "build": "node scripts/build.js && cleancss -o dist/megon.min.css dist/megon.css"
   },
   "keywords": [
     "css",
@@ -23,5 +23,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/MegonLabs/megoncss.git"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "postcss": "^8.5.15"
   }
 }

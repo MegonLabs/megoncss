@@ -1,0 +1,724 @@
+{
+  "version": "0.1.0",
+  "framework": "MegonCSS",
+  "naming": "Exact Pixel",
+  "description": "MegonCSS utility classes with exact pixel values. No memorization needed - pad-16 = padding: 16px",
+  "classes": {
+    "spacing": {
+      "pad": {
+        "pattern": "pad-{0-96}",
+        "description": "Padding (all sides)",
+        "example": "pad-16 → padding: 16px",
+        "categories": ["spacing"]
+      },
+      "pad-t": {
+        "pattern": "pad-t-{0-96}",
+        "description": "Padding top",
+        "example": "pad-t-8 → padding-top: 8px",
+        "categories": ["spacing"]
+      },
+      "pad-b": {
+        "pattern": "pad-b-{0-96}",
+        "description": "Padding bottom",
+        "example": "pad-b-8 → padding-bottom: 8px",
+        "categories": ["spacing"]
+      },
+      "pad-l": {
+        "pattern": "pad-l-{0-96}",
+        "description": "Padding left",
+        "example": "pad-l-8 → padding-left: 8px",
+        "categories": ["spacing"]
+      },
+      "pad-r": {
+        "pattern": "pad-r-{0-96}",
+        "description": "Padding right",
+        "example": "pad-r-8 → padding-right: 8px",
+        "categories": ["spacing"]
+      },
+      "pad-x": {
+        "pattern": "pad-x-{0-96}",
+        "description": "Padding left and right",
+        "example": "pad-x-16 → padding-left: 16px; padding-right: 16px",
+        "categories": ["spacing"]
+      },
+      "pad-y": {
+        "pattern": "pad-y-{0-96}",
+        "description": "Padding top and bottom",
+        "example": "pad-y-16 → padding-top: 16px; padding-bottom: 16px",
+        "categories": ["spacing"]
+      },
+      "mar": {
+        "pattern": "mar-{0-96}",
+        "description": "Margin (all sides)",
+        "example": "mar-16 → margin: 16px",
+        "categories": ["spacing"]
+      },
+      "mar-t": {
+        "pattern": "mar-t-{0-96}",
+        "description": "Margin top",
+        "example": "mar-t-8 → margin-top: 8px",
+        "categories": ["spacing"]
+      },
+      "mar-b": {
+        "pattern": "mar-b-{0-96}",
+        "description": "Margin bottom",
+        "example": "mar-b-8 → margin-bottom: 8px",
+        "categories": ["spacing"]
+      },
+      "mar-l": {
+        "pattern": "mar-l-{0-96}",
+        "description": "Margin left",
+        "example": "mar-l-8 → margin-left: 8px",
+        "categories": ["spacing"]
+      },
+      "mar-r": {
+        "pattern": "mar-r-{0-96}",
+        "description": "Margin right",
+        "example": "mar-r-8 → margin-right: 8px",
+        "categories": ["spacing"]
+      },
+      "mar-x": {
+        "pattern": "mar-x-{0-96|auto}",
+        "description": "Margin left and right",
+        "example": "mar-x-auto → margin-left: auto; margin-right: auto",
+        "categories": ["spacing"]
+      },
+      "mar-y": {
+        "pattern": "mar-y-{0-96|auto}",
+        "description": "Margin top and bottom",
+        "example": "mar-y-16 → margin-top: 16px; margin-bottom: 16px",
+        "categories": ["spacing"]
+      }
+    },
+    "gap": {
+      "gap": {
+        "pattern": "gap-{0-96}",
+        "description": "Gap (all directions)",
+        "example": "gap-8 → gap: 8px",
+        "categories": ["grid", "flexbox"]
+      },
+      "gap-x": {
+        "pattern": "gap-x-{0-96}",
+        "description": "Column gap",
+        "example": "gap-x-8 → column-gap: 8px",
+        "categories": ["grid", "flexbox"]
+      },
+      "gap-y": {
+        "pattern": "gap-y-{0-96}",
+        "description": "Row gap",
+        "example": "gap-y-8 → row-gap: 8px",
+        "categories": ["grid", "flexbox"]
+      }
+    },
+    "typography": {
+      "fs": {
+        "pattern": "fs-{8-96}",
+        "description": "Font size in pixels",
+        "example": "fs-18 → font-size: 18px",
+        "categories": ["typography"]
+      },
+      "fw": {
+        "pattern": "fw-{100-900}",
+        "description": "Font weight",
+        "example": "fw-700 → font-weight: 700",
+        "categories": ["typography"]
+      },
+      "lh": {
+        "pattern": "lh-{0-96}",
+        "description": "Line height in pixels",
+        "example": "lh-24 → line-height: 24px",
+        "categories": ["typography"]
+      },
+      "ls": {
+        "pattern": "ls-{tight|normal|wide}",
+        "description": "Letter spacing",
+        "example": "ls-tight → letter-spacing: -0.025em",
+        "categories": ["typography"]
+      },
+      "ta": {
+        "pattern": "ta-{left|center|right|justify}",
+        "description": "Text alignment",
+        "example": "ta-center → text-align: center",
+        "categories": ["typography"]
+      },
+      "tt": {
+        "pattern": "tt-{uppercase|lowercase|capitalize}",
+        "description": "Text transform",
+        "example": "tt-uppercase → text-transform: uppercase",
+        "categories": ["typography"]
+      },
+      "td": {
+        "pattern": "td-{underline|line-through|none}",
+        "description": "Text decoration",
+        "example": "td-underline → text-decoration: underline",
+        "categories": ["typography"]
+      }
+    },
+    "colors": {
+      "bg": {
+        "pattern": "bg-{color}",
+        "description": "Background color",
+        "example": "bg-blue → background-color: #3b82f6",
+        "colors": [
+          "white",
+          "black",
+          "gray",
+          "red",
+          "orange",
+          "yellow",
+          "green",
+          "teal",
+          "blue",
+          "purple",
+          "pink",
+          "indigo"
+        ],
+        "categories": ["colors"]
+      },
+      "text": {
+        "pattern": "text-{color}",
+        "description": "Text color",
+        "example": "text-blue → color: #3b82f6",
+        "colors": [
+          "white",
+          "black",
+          "gray",
+          "red",
+          "orange",
+          "yellow",
+          "green",
+          "teal",
+          "blue",
+          "purple",
+          "pink",
+          "indigo"
+        ],
+        "categories": ["colors"]
+      },
+      "border": {
+        "pattern": "border-{color}",
+        "description": "Border color",
+        "example": "border-blue → border-color: #3b82f6",
+        "categories": ["colors"]
+      }
+    },
+    "display": {
+      "hide": {
+        "description": "Display none",
+        "example": "hide → display: none",
+        "categories": ["layout"]
+      },
+      "block": {
+        "description": "Display block",
+        "example": "block → display: block",
+        "categories": ["layout"]
+      },
+      "inline": {
+        "description": "Display inline",
+        "example": "inline → display: inline",
+        "categories": ["layout"]
+      },
+      "inline-block": {
+        "description": "Display inline-block",
+        "example": "inline-block → display: inline-block",
+        "categories": ["layout"]
+      },
+      "flex": {
+        "description": "Display flex",
+        "example": "flex → display: flex",
+        "categories": ["layout", "flexbox"]
+      },
+      "grid": {
+        "description": "Display grid",
+        "example": "grid → display: grid",
+        "categories": ["layout", "grid"]
+      }
+    },
+    "flexbox": {
+      "flex-row": {
+        "description": "Flex direction row",
+        "example": "flex-row → flex-direction: row",
+        "categories": ["flexbox"]
+      },
+      "flex-col": {
+        "description": "Flex direction column",
+        "example": "flex-col → flex-direction: column",
+        "categories": ["flexbox"]
+      },
+      "flex-wrap": {
+        "description": "Flex wrap wrap",
+        "example": "flex-wrap → flex-wrap: wrap",
+        "categories": ["flexbox"]
+      },
+      "flex-nowrap": {
+        "description": "Flex wrap nowrap",
+        "example": "flex-nowrap → flex-wrap: nowrap",
+        "categories": ["flexbox"]
+      },
+      "items-start": {
+        "description": "Align items flex-start",
+        "example": "items-start → align-items: flex-start",
+        "categories": ["flexbox"]
+      },
+      "items-center": {
+        "description": "Align items center",
+        "example": "items-center → align-items: center",
+        "categories": ["flexbox"]
+      },
+      "items-end": {
+        "description": "Align items flex-end",
+        "example": "items-end → align-items: flex-end",
+        "categories": ["flexbox"]
+      },
+      "items-stretch": {
+        "description": "Align items stretch",
+        "example": "items-stretch → align-items: stretch",
+        "categories": ["flexbox"]
+      },
+      "justify-start": {
+        "description": "Justify content flex-start",
+        "example": "justify-start → justify-content: flex-start",
+        "categories": ["flexbox"]
+      },
+      "justify-center": {
+        "description": "Justify content center",
+        "example": "justify-center → justify-content: center",
+        "categories": ["flexbox"]
+      },
+      "justify-end": {
+        "description": "Justify content flex-end",
+        "example": "justify-end → justify-content: flex-end",
+        "categories": ["flexbox"]
+      },
+      "justify-between": {
+        "description": "Justify content space-between",
+        "example": "justify-between → justify-content: space-between",
+        "categories": ["flexbox"]
+      },
+      "justify-around": {
+        "description": "Justify content space-around",
+        "example": "justify-around → justify-content: space-around",
+        "categories": ["flexbox"]
+      },
+      "grow": {
+        "description": "Flex grow 1",
+        "example": "grow → flex-grow: 1",
+        "categories": ["flexbox"]
+      },
+      "shrink": {
+        "description": "Flex shrink 1",
+        "example": "shrink → flex-shrink: 1",
+        "categories": ["flexbox"]
+      }
+    },
+    "grid": {
+      "grid-2": {
+        "description": "Grid template columns repeat 2",
+        "example": "grid-2 → grid-template-columns: repeat(2, minmax(0, 1fr))",
+        "categories": ["grid"]
+      },
+      "grid-3": {
+        "description": "Grid template columns repeat 3",
+        "example": "grid-3 → grid-template-columns: repeat(3, minmax(0, 1fr))",
+        "categories": ["grid"]
+      },
+      "grid-4": {
+        "description": "Grid template columns repeat 4",
+        "example": "grid-4 → grid-template-columns: repeat(4, minmax(0, 1fr))",
+        "categories": ["grid"]
+      },
+      "grid-5": {
+        "description": "Grid template columns repeat 5",
+        "example": "grid-5 → grid-template-columns: repeat(5, minmax(0, 1fr))",
+        "categories": ["grid"]
+      },
+      "grid-6": {
+        "description": "Grid template columns repeat 6",
+        "example": "grid-6 → grid-template-columns: repeat(6, minmax(0, 1fr))",
+        "categories": ["grid"]
+      },
+      "grid-cols-1": {
+        "description": "Grid template columns 1",
+        "example": "grid-cols-1 → grid-template-columns: repeat(1, minmax(0, 1fr))",
+        "categories": ["grid"]
+      },
+      "grid-cols-2": {
+        "description": "Grid template columns 2",
+        "example": "grid-cols-2 → grid-template-columns: repeat(2, minmax(0, 1fr))",
+        "categories": ["grid"]
+      },
+      "grid-cols-3": {
+        "description": "Grid template columns 3",
+        "example": "grid-cols-3 → grid-template-columns: repeat(3, minmax(0, 1fr))",
+        "categories": ["grid"]
+      },
+      "grid-rows-1": {
+        "description": "Grid template rows 1",
+        "example": "grid-rows-1 → grid-template-rows: repeat(1, minmax(0, 1fr))",
+        "categories": ["grid"]
+      },
+      "grid-rows-2": {
+        "description": "Grid template rows 2",
+        "example": "grid-rows-2 → grid-template-rows: repeat(2, minmax(0, 1fr))",
+        "categories": ["grid"]
+      },
+      "grid-rows-3": {
+        "description": "Grid template rows 3",
+        "example": "grid-rows-3 → grid-template-rows: repeat(3, minmax(0, 1fr))",
+        "categories": ["grid"]
+      },
+      "col-span-2": {
+        "description": "Column span 2",
+        "example": "col-span-2 → grid-column: span 2 / span 2",
+        "categories": ["grid"]
+      },
+      "col-span-3": {
+        "description": "Column span 3",
+        "example": "col-span-3 → grid-column: span 3 / span 3",
+        "categories": ["grid"]
+      },
+      "row-span-2": {
+        "description": "Row span 2",
+        "example": "row-span-2 → grid-row: span 2 / span 2",
+        "categories": ["grid"]
+      }
+    },
+    "position": {
+      "relative": {
+        "description": "Position relative",
+        "example": "relative → position: relative",
+        "categories": ["layout"]
+      },
+      "absolute": {
+        "description": "Position absolute",
+        "example": "absolute → position: absolute",
+        "categories": ["layout"]
+      },
+      "fixed": {
+        "description": "Position fixed",
+        "example": "fixed → position: fixed",
+        "categories": ["layout"]
+      },
+      "sticky": {
+        "description": "Position sticky",
+        "example": "sticky → position: sticky",
+        "categories": ["layout"]
+      },
+      "inset-0": {
+        "description": "Inset 0 (top, right, bottom, left)",
+        "example": "inset-0 → inset: 0px",
+        "categories": ["layout"]
+      }
+    },
+    "sizing": {
+      "w-full": {
+        "description": "Width 100%",
+        "example": "w-full → width: 100%",
+        "categories": ["layout"]
+      },
+      "w-auto": {
+        "description": "Width auto",
+        "example": "w-auto → width: auto",
+        "categories": ["layout"]
+      },
+      "w-screen": {
+        "description": "Width 100vw",
+        "example": "w-screen → width: 100vw",
+        "categories": ["layout"]
+      },
+      "h-full": {
+        "description": "Height 100%",
+        "example": "h-full → height: 100%",
+        "categories": ["layout"]
+      },
+      "h-auto": {
+        "description": "Height auto",
+        "example": "h-auto → height: auto",
+        "categories": ["layout"]
+      },
+      "h-screen": {
+        "description": "Height 100vh",
+        "example": "h-screen → height: 100vh",
+        "categories": ["layout"]
+      },
+      "max-w-sm": {
+        "description": "Max width small",
+        "example": "max-w-sm → max-width: 384px",
+        "categories": ["layout"]
+      },
+      "max-w-md": {
+        "description": "Max width medium",
+        "example": "max-w-md → max-width: 448px",
+        "categories": ["layout"]
+      },
+      "max-w-lg": {
+        "description": "Max width large",
+        "example": "max-w-lg → max-width: 512px",
+        "categories": ["layout"]
+      },
+      "max-w-xl": {
+        "description": "Max width extra large",
+        "example": "max-w-xl → max-width: 576px",
+        "categories": ["layout"]
+      },
+      "min-w-0": {
+        "description": "Min width 0",
+        "example": "min-w-0 → min-width: 0px",
+        "categories": ["layout"]
+      },
+      "min-h-0": {
+        "description": "Min height 0",
+        "example": "min-h-0 → min-height: 0px",
+        "categories": ["layout"]
+      }
+    },
+    "border": {
+      "round-{0-96}": {
+        "pattern": "round-{0-96|full}",
+        "description": "Border radius in pixels",
+        "example": "round-8 → border-radius: 8px; round-full → border-radius: 9999px",
+        "categories": ["border"]
+      },
+      "border": {
+        "description": "Border width 1px",
+        "example": "border → border-width: 1px",
+        "categories": ["border"]
+      },
+      "border-t": {
+        "description": "Border top",
+        "example": "border-t → border-top-width: 1px",
+        "categories": ["border"]
+      },
+      "border-b": {
+        "description": "Border bottom",
+        "example": "border-b → border-bottom-width: 1px",
+        "categories": ["border"]
+      }
+    },
+    "effects": {
+      "shadow-sm": {
+        "description": "Small shadow",
+        "example": "shadow-sm → box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05)",
+        "categories": ["effects"]
+      },
+      "shadow-md": {
+        "description": "Medium shadow",
+        "example": "shadow-md → box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1)",
+        "categories": ["effects"]
+      },
+      "shadow-lg": {
+        "description": "Large shadow",
+        "example": "shadow-lg → box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1)",
+        "categories": ["effects"]
+      },
+      "shadow-xl": {
+        "description": "Extra large shadow",
+        "example": "shadow-xl → box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1)",
+        "categories": ["effects"]
+      },
+      "shadow-2xl": {
+        "description": "2XL shadow",
+        "example": "shadow-2xl → box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25)",
+        "categories": ["effects"]
+      },
+      "shadow-inner": {
+        "description": "Inner shadow",
+        "example": "shadow-inner → box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05)",
+        "categories": ["effects"]
+      },
+      "shadow-none": {
+        "description": "No shadow",
+        "example": "shadow-none → box-shadow: none",
+        "categories": ["effects"]
+      },
+      "opacity-0": {
+        "description": "Opacity 0",
+        "example": "opacity-0 → opacity: 0",
+        "categories": ["effects"]
+      },
+      "opacity-25": {
+        "description": "Opacity 0.25",
+        "example": "opacity-25 → opacity: 0.25",
+        "categories": ["effects"]
+      },
+      "opacity-50": {
+        "description": "Opacity 0.5",
+        "example": "opacity-50 → opacity: 0.5",
+        "categories": ["effects"]
+      },
+      "opacity-75": {
+        "description": "Opacity 0.75",
+        "example": "opacity-75 → opacity: 0.75",
+        "categories": ["effects"]
+      },
+      "opacity-100": {
+        "description": "Opacity 1",
+        "example": "opacity-100 → opacity: 1",
+        "categories": ["effects"]
+      }
+    },
+    "visibility": {
+      "visible": {
+        "description": "Visibility visible",
+        "example": "visible → visibility: visible",
+        "categories": ["layout"]
+      },
+      "invisible": {
+        "description": "Visibility invisible",
+        "example": "invisible → visibility: invisible",
+        "categories": ["layout"]
+      }
+    },
+    "overflow": {
+      "overflow-hidden": {
+        "description": "Overflow hidden",
+        "example": "overflow-hidden → overflow: hidden",
+        "categories": ["layout"]
+      },
+      "overflow-auto": {
+        "description": "Overflow auto",
+        "example": "overflow-auto → overflow: auto",
+        "categories": ["layout"]
+      },
+      "overflow-scroll": {
+        "description": "Overflow scroll",
+        "example": "overflow-scroll → overflow: scroll",
+        "categories": ["layout"]
+      },
+      "overflow-x-auto": {
+        "description": "Overflow X auto",
+        "example": "overflow-x-auto → overflow-x: auto",
+        "categories": ["layout"]
+      },
+      "overflow-y-auto": {
+        "description": "Overflow Y auto",
+        "example": "overflow-y-auto → overflow-y: auto",
+        "categories": ["layout"]
+      }
+    },
+    "cursor": {
+      "cursor-pointer": {
+        "description": "Cursor pointer",
+        "example": "cursor-pointer → cursor: pointer",
+        "categories": ["interactivity"]
+      },
+      "cursor-default": {
+        "description": "Cursor default",
+        "example": "cursor-default → cursor: default",
+        "categories": ["interactivity"]
+      },
+      "cursor-not-allowed": {
+        "description": "Cursor not-allowed",
+        "example": "cursor-not-allowed → cursor: not-allowed",
+        "categories": ["interactivity"]
+      },
+      "cursor-grab": {
+        "description": "Cursor grab",
+        "example": "cursor-grab → cursor: grab",
+        "categories": ["interactivity"]
+      },
+      "cursor-grabbing": {
+        "description": "Cursor grabbing",
+        "example": "cursor-grabbing → cursor: grabbing",
+        "categories": ["interactivity"]
+      }
+    },
+    "transition": {
+      "transition": {
+        "description": "Transition all properties",
+        "example": "transition → transition: all 150ms ease",
+        "categories": ["effects"]
+      }
+    },
+    "components": {
+      "btn": {
+        "description": "Base button styles",
+        "categories": ["components"]
+      },
+      "btn-primary": {
+        "description": "Primary button (blue background)",
+        "categories": ["components"]
+      },
+      "btn-sm": {
+        "description": "Small button",
+        "categories": ["components"]
+      },
+      "btn-lg": {
+        "description": "Large button",
+        "categories": ["components"]
+      },
+      "input": {
+        "description": "Text input field",
+        "categories": ["components"]
+      },
+      "select": {
+        "description": "Select dropdown",
+        "categories": ["components"]
+      },
+      "textarea": {
+        "description": "Textarea field",
+        "categories": ["components"]
+      },
+      "card": {
+        "description": "Card container",
+        "categories": ["components"]
+      },
+      "badge": {
+        "description": "Badge component",
+        "categories": ["components"]
+      },
+      "alert": {
+        "description": "Alert component",
+        "categories": ["components"]
+      },
+      "modal": {
+        "description": "Modal dialog",
+        "categories": ["components"]
+      },
+      "modal-overlay": {
+        "description": "Modal overlay backdrop",
+        "categories": ["components"]
+      },
+      "toast": {
+        "description": "Toast notification",
+        "categories": ["components"]
+      },
+      "table": {
+        "description": "Table component",
+        "categories": ["components"]
+      },
+      "dropdown": {
+        "description": "Dropdown menu",
+        "categories": ["components"]
+      },
+      "tabs": {
+        "description": "Tab navigation",
+        "categories": ["components"]
+      },
+      "accordion": {
+        "description": "Accordion component",
+        "categories": ["components"]
+      },
+      "skeleton": {
+        "description": "Skeleton loading",
+        "categories": ["components"]
+      },
+      "avatar": {
+        "description": "Avatar component",
+        "categories": ["components"]
+      },
+      "divider": {
+        "description": "Divider/separator",
+        "categories": ["components"]
+      },
+      "tooltip": {
+        "description": "Tooltip component",
+        "categories": ["components"]
+      },
+      "switch": {
+        "description": "Toggle switch",
+        "categories": ["components"]
+      }
+    }
+  }
+}

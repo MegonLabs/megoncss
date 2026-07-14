@@ -41,11 +41,28 @@
 .alert-desc {
   font-size: 14px;
   color: var(--text-secondary);
-  line-height: 1.4;
+  line-height: 1.5;
   margin: 0;
 }
 
-/* Variants */
+.alert-close {
+  flex-shrink: 0;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: var(--radius-4);
+  transition: all var(--motion-fast);
+  margin-top: 2px;
+}
+
+.alert-close:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: var(--text-primary);
+}
+
+/* ─── Variants ─── */
 .alert-error {
   border-color: var(--color-red) !important;
   background-color: var(--color-red-light);
@@ -63,6 +80,87 @@
 }
 
 .alert-success .alert-icon,
-.alert-success .alert-title {
+.alert-success .alert-title,
+.alert-success .alert-desc {
   color: var(--color-green-dark) !important;
+}
+
+.alert-warning {
+  border-color: var(--color-yellow) !important;
+  background-color: var(--color-yellow-light);
+}
+
+.alert-warning .alert-icon,
+.alert-warning .alert-title,
+.alert-warning .alert-desc {
+  color: #92400e !important;
+}
+
+.alert-info {
+  border-color: var(--color-blue) !important;
+  background-color: var(--color-blue-light);
+}
+
+.alert-info .alert-icon,
+.alert-info .alert-title,
+.alert-info .alert-desc {
+  color: var(--color-blue-dark) !important;
+}
+
+/* ─── Sizes ─── */
+.alert-sm {
+  padding: 12px;
+  gap: 8px;
+}
+
+.alert-sm .alert-icon {
+  font-size: 14px;
+}
+
+.alert-sm .alert-title {
+  font-size: 13px;
+}
+
+.alert-sm .alert-desc {
+  font-size: 13px;
+}
+
+.alert-lg {
+  padding: 20px;
+  gap: 16px;
+}
+
+.alert-lg .alert-icon {
+  font-size: 20px;
+}
+
+.alert-lg .alert-title {
+  font-size: 16px;
+}
+
+.alert-lg .alert-desc {
+  font-size: 15px;
+}
+
+/* ─── Border Left Style ─── */
+.alert-bordered {
+  border: none;
+  border-left: 4px solid var(--border-default);
+  background-color: var(--bg-muted);
+}
+
+.alert-bordered.alert-error {
+  border-left-color: var(--color-red);
+}
+
+.alert-bordered.alert-success {
+  border-left-color: var(--color-green);
+}
+
+.alert-bordered.alert-warning {
+  border-left-color: var(--color-yellow);
+}
+
+.alert-bordered.alert-info {
+  border-left-color: var(--color-blue);
 }

@@ -1,34 +1,193 @@
 /* MegonCSS Table Component */
 
+.megon-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .megon-table {
   width: 100%;
   border-collapse: collapse;
+  font-size: 14px;
 }
 
 .megon-table th {
   text-align: left;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
   color: var(--text-secondary);
-  padding: 12px;
+  padding: 12px 16px;
   border-bottom: 1px solid var(--border-default);
+  white-space: nowrap;
+  background-color: var(--bg-muted);
 }
 
 .megon-table td {
-  padding: 12px;
+  padding: 12px 16px;
   font-size: 14px;
   border-bottom: 1px solid var(--border-default);
   color: var(--text-primary);
+  vertical-align: middle;
 }
 
 .megon-table tr:last-child td {
   border-bottom: none;
 }
 
+/* ─── Variants ─── */
 .megon-table-striped tbody tr:nth-child(odd) {
   background-color: var(--bg-muted);
 }
 
 .megon-table-hover tbody tr:hover {
   background-color: var(--bg-secondary);
+}
+
+.megon-table-bordered {
+  border: 1px solid var(--border-default);
+}
+
+.megon-table-bordered th,
+.megon-table-bordered td {
+  border: 1px solid var(--border-default);
+}
+
+/* ─── Sizes ─── */
+.megon-table-compact th,
+.megon-table-compact td {
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+.megon-table-compact th {
+  font-size: 12px;
+}
+
+.megon-table-spacious th,
+.megon-table-spacious td {
+  padding: 16px 20px;
+}
+
+/* ─── Alignment ─── */
+.megon-table .ta-center {
+  text-align: center;
+}
+
+.megon-table .ta-right {
+  text-align: right;
+}
+
+/* ─── Cell Width ─── */
+.megon-table .w-auto {
+  width: auto;
+}
+
+.megon-table .w-full {
+  width: 100%;
+}
+
+/* ─── Sticky Header ─── */
+.megon-table-wrapper-sticky {
+  position: relative;
+}
+
+.megon-table-wrapper-sticky .megon-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.megon-table-wrapper-sticky .megon-table th {
+  background-color: var(--bg-primary);
+}
+
+.megon-table-wrapper-sticky.megon-table-striped .megon-table th {
+  background-color: var(--bg-muted);
+}
+
+/* ─── Sortable Headers ─── */
+.megon-table-sortable th {
+  cursor: pointer;
+  user-select: none;
+  transition: color var(--motion-fast);
+}
+
+.megon-table-sortable th:hover {
+  color: var(--text-primary);
+}
+
+.megon-table-sortable th::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 6px;
+  vertical-align: middle;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid currentColor;
+  opacity: 0.3;
+}
+
+.megon-table-sortable th.sort-asc::after {
+  opacity: 1;
+  border-top: none;
+  border-bottom: 4px solid currentColor;
+}
+
+.megon-table-sortable th.sort-desc::after {
+  opacity: 1;
+  border-top: 4px solid currentColor;
+}
+
+/* ─── Empty State ─── */
+.megon-table-empty td {
+  text-align: center;
+  padding: 40px 16px;
+  color: var(--text-muted);
+}
+
+/* ─── Cell Variants ─── */
+.megon-table .cell-bold {
+  font-weight: 600;
+}
+
+.megon-table .cell-muted {
+  color: var(--text-secondary);
+}
+
+.megon-table .cell-small {
+  font-size: 12px;
+}
+
+/* ─── Row Selection ─── */
+.megon-table-selectable tbody tr {
+  cursor: pointer;
+  transition: background-color var(--motion-fast);
+}
+
+.megon-table-selectable tbody tr:hover {
+  background-color: var(--bg-secondary);
+}
+
+.megon-table-selectable tbody tr.selected {
+  background-color: var(--color-blue-light);
+}
+
+.megon-table-selectable tbody tr.selected:hover {
+  background-color: var(--color-blue-light);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .megon-table-responsive {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .megon-table-responsive .megon-table {
+    min-width: 600px;
+  }
 }

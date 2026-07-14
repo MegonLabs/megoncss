@@ -1,0 +1,224 @@
+{
+  "version": "0.1.0",
+  "framework": "MegonCSS",
+  "examples": {
+    "login-form": {
+      "name": "Login Form",
+      "description": "Complete login form with email and password fields",
+      "category": "forms",
+      "html": "<div class=\"card\" style=\"max-w: 400px; margin: 0 auto;\">\n  <div class=\"card-body\">\n    <h2 class=\"fs-24 fw-700 mar-b-16\">Login</h2>\n    <div class=\"field mar-b-16\">\n      <label class=\"field-label\">Email</label>\n      <input class=\"input\" type=\"email\" placeholder=\"you@example.com\">\n    </div>\n    <div class=\"field mar-b-16\">\n      <label class=\"field-label\">Password</label>\n      <input class=\"input\" type=\"password\" placeholder=\"••••••••\">\n    </div>\n    <button class=\"btn btn-primary w-full\">Login</button>\n  </div>\n</div>",
+      "classes_used": [
+        "card",
+        "card-body",
+        "fs-24",
+        "fw-700",
+        "mar-b-16",
+        "field",
+        "field-label",
+        "input",
+        "btn",
+        "btn-primary",
+        "w-full"
+      ]
+    },
+    "pricing-section": {
+      "name": "Pricing Section",
+      "description": "Three-column pricing cards",
+      "category": "sections",
+      "html": "<section class=\"pad-y-64\">\n  <h2 class=\"fs-32 fw-700 ta-center mar-b-32\">Pricing</h2>\n  <div class=\"grid grid-3 gap-24\" style=\"max-w: 1024px; margin: 0 auto;\">\n    <div class=\"card\">\n      <div class=\"card-body\">\n        <h3 class=\"fs-20 fw-600\">Basic</h3>\n        <div class=\"fs-36 fw-700 mar-y-16\">$9/mo</div>\n        <ul class=\"mar-b-24\">\n          <li>Feature 1</li>\n          <li>Feature 2</li>\n        </ul>\n        <button class=\"btn w-full\">Get Started</button>\n      </div>\n    </div>\n    <div class=\"card\" style=\"border: 2px solid #3b82f6;\">\n      <div class=\"card-body\">\n        <h3 class=\"fs-20 fw-600\">Pro</h3>\n        <div class=\"fs-36 fw-700 mar-y-16\">$29/mo</div>\n        <ul class=\"mar-b-24\">\n          <li>All Basic features</li>\n          <li>Feature 3</li>\n        </ul>\n        <button class=\"btn btn-primary w-full\">Get Started</button>\n      </div>\n    </div>\n    <div class=\"card\">\n      <div class=\"card-body\">\n        <h3 class=\"fs-20 fw-600\">Enterprise</h3>\n        <div class=\"fs-36 fw-700 mar-y-16\">$99/mo</div>\n        <ul class=\"mar-b-24\">\n          <li>All Pro features</li>\n          <li>Feature 4</li>\n        </ul>\n        <button class=\"btn w-full\">Contact Us</button>\n      </div>\n    </div>\n  </div>\n</section>",
+      "classes_used": [
+        "pad-y-64",
+        "fs-32",
+        "fw-700",
+        "ta-center",
+        "mar-b-32",
+        "grid",
+        "grid-3",
+        "gap-24",
+        "card",
+        "card-body",
+        "fs-20",
+        "fs-36",
+        "mar-y-16",
+        "mar-b-24",
+        "btn",
+        "btn-primary",
+        "w-full"
+      ]
+    },
+    "navbar": {
+      "name": "Navigation Bar",
+      "description": "Responsive navigation header",
+      "category": "navigation",
+      "html": "<nav class=\"flex items-center justify-between pad-x-24 pad-y-16 bg-white\" style=\"box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);\">\n  <div class=\"flex items-center gap-24\">\n    <a class=\"fs-20 fw-700 text-blue\" href=\"/\">Logo</a>\n    <div class=\"flex gap-16\">\n      <a class=\"cursor-pointer\" href=\"/\">Home</a>\n      <a class=\"cursor-pointer\" href=\"/about\">About</a>\n      <a class=\"cursor-pointer\" href=\"/contact\">Contact</a>\n    </div>\n  </div>\n  <div class=\"flex items-center gap-16\">\n    <button class=\"btn btn-ghost btn-sm\">Login</button>\n    <button class=\"btn btn-primary btn-sm\">Sign Up</button>\n  </div>\n</nav>",
+      "classes_used": [
+        "flex",
+        "items-center",
+        "justify-between",
+        "pad-x-24",
+        "pad-y-16",
+        "bg-white",
+        "fs-20",
+        "fw-700",
+        "text-blue",
+        "gap-24",
+        "gap-16",
+        "cursor-pointer",
+        "btn",
+        "btn-ghost",
+        "btn-sm",
+        "btn-primary"
+      ]
+    },
+    "hero-section": {
+      "name": "Hero Section",
+      "description": "Full-width hero with call to action",
+      "category": "sections",
+      "html": "<section class=\"flex flex-col items-center justify-center\" style=\"min-height: 60vh; background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: white;\">\n  <h1 class=\"fs-48 fw-700 ta-center mar-b-16\">Welcome to MegonCSS</h1>\n  <p class=\"fs-20 ta-center mar-b-32\" style=\"max-width: 600px; opacity: 0.9;\">The utility-first CSS framework with exact pixel naming</p>\n  <div class=\"flex gap-16\">\n    <button class=\"btn\" style=\"background: white; color: #3b82f6;\">Get Started</button>\n    <button class=\"btn\" style=\"border: 2px solid white; color: white;\">Learn More</button>\n  </div>\n</section>",
+      "classes_used": [
+        "flex",
+        "flex-col",
+        "items-center",
+        "justify-center",
+        "fs-48",
+        "fw-700",
+        "ta-center",
+        "mar-b-16",
+        "fs-20",
+        "mar-b-32",
+        "flex",
+        "gap-16",
+        "btn"
+      ]
+    },
+    "dashboard-stats": {
+      "name": "Dashboard Stats",
+      "description": "Statistics cards for dashboard",
+      "category": "components",
+      "html": "<div class=\"grid grid-4 gap-24\">\n  <div class=\"card\">\n    <div class=\"card-body\">\n      <div class=\"text-gray\">Total Users</div>\n      <div class=\"fs-32 fw-700\">12,345</div>\n      <div class=\"text-green\" style=\"font-size: 14px;\">+12%</div>\n    </div>\n  </div>\n  <div class=\"card\">\n    <div class=\"card-body\">\n      <div class=\"text-gray\">Revenue</div>\n      <div class=\"fs-32 fw-700\">$45,678</div>\n      <div class=\"text-green\" style=\"font-size: 14px;\">+8%</div>\n    </div>\n  </div>\n  <div class=\"card\">\n    <div class=\"card-body\">\n      <div class=\"text-gray\">Orders</div>\n      <div class=\"fs-32 fw-700\">1,234</div>\n      <div class=\"text-red\" style=\"font-size: 14px;\">-3%</div>\n    </div>\n  </div>\n  <div class=\"card\">\n    <div class=\"card-body\">\n      <div class=\"text-gray\">Conversion</div>\n      <div class=\"fs-32 fw-700\">3.2%</div>\n      <div class=\"text-green\" style=\"font-size: 14px;\">+0.5%</div>\n    </div>\n  </div>\n</div>",
+      "classes_used": [
+        "grid",
+        "grid-4",
+        "gap-24",
+        "card",
+        "card-body",
+        "text-gray",
+        "fs-32",
+        "fw-700",
+        "text-green",
+        "text-red"
+      ]
+    },
+    "alert-banner": {
+      "name": "Alert Banner",
+      "description": "Informational alert message",
+      "category": "feedback",
+      "html": "<div class=\"alert alert-info\">\n  <div class=\"flex items-center gap-12\">\n    <svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"currentColor\">\n      <path fill-rule=\"evenodd\" d=\"M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z\"/>\n    </svg>\n    <span>This is an informational message.</span>\n  </div>\n</div>",
+      "classes_used": ["alert", "alert-info", "flex", "items-center", "gap-12"]
+    },
+    "data-table": {
+      "name": "Data Table",
+      "description": "Responsive data table with sticky header",
+      "category": "components",
+      "html": "<div class=\"table-wrapper\">\n  <table class=\"table table-sticky\">\n    <thead>\n      <tr>\n        <th>Name</th>\n        <th>Email</th>\n        <th>Role</th>\n        <th>Status</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td>John Doe</td>\n        <td>john@example.com</td>\n        <td>Admin</td>\n        <td><span class=\"badge badge-success\">Active</span></td>\n      </tr>\n      <tr>\n        <td>Jane Smith</td>\n        <td>jane@example.com</td>\n        <td>User</td>\n        <td><span class=\"badge badge-warning\">Pending</span></td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+      "classes_used": [
+        "table-wrapper",
+        "table",
+        "table-sticky",
+        "badge",
+        "badge-success",
+        "badge-warning"
+      ]
+    },
+    "modal-dialog": {
+      "name": "Modal Dialog",
+      "description": "Confirmation modal with actions",
+      "category": "feedback",
+      "html": "<div class=\"modal-overlay\">\n  <div class=\"modal modal-sm\">\n    <div class=\"card\">\n      <div class=\"card-body\">\n        <h3 class=\"fs-20 fw-600 mar-b-8\">Delete Item?</h3>\n        <p class=\"text-gray mar-b-24\">This action cannot be undone.</p>\n        <div class=\"flex justify-end gap-12\">\n          <button class=\"btn btn-ghost\">Cancel</button>\n          <button class=\"btn btn-danger\">Delete</button>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>",
+      "classes_used": [
+        "modal-overlay",
+        "modal",
+        "modal-sm",
+        "card",
+        "card-body",
+        "fs-20",
+        "fw-600",
+        "mar-b-8",
+        "text-gray",
+        "mar-b-24",
+        "flex",
+        "justify-end",
+        "gap-12",
+        "btn",
+        "btn-ghost",
+        "btn-danger"
+      ]
+    },
+    "user-profile": {
+      "name": "User Profile Card",
+      "description": "User profile information display",
+      "category": "components",
+      "html": "<div class=\"card\" style=\"max-width: 320px;\">\n  <div class=\"card-body\" style=\"text-align: center;\">\n    <img class=\"avatar avatar-lg\" src=\"avatar.jpg\" alt=\"User\" style=\"margin: 0 auto 16px;\">\n    <h3 class=\"fs-18 fw-600\">John Doe</h3>\n    <p class=\"text-gray mar-b-16\">john@example.com</p>\n    <div class=\"flex justify-center gap-16\">\n      <button class=\"btn btn-primary btn-sm\">Follow</button>\n      <button class=\"btn btn-ghost btn-sm\">Message</button>\n    </div>\n  </div>\n</div>",
+      "classes_used": [
+        "card",
+        "card-body",
+        "avatar",
+        "avatar-lg",
+        "fs-18",
+        "fw-600",
+        "text-gray",
+        "mar-b-16",
+        "flex",
+        "justify-center",
+        "gap-16",
+        "btn",
+        "btn-primary",
+        "btn-sm",
+        "btn-ghost"
+      ]
+    },
+    "sidebar-layout": {
+      "name": "Sidebar Layout",
+      "description": "Dashboard layout with sidebar",
+      "category": "layout",
+      "html": "<div class=\"flex\" style=\"min-height: 100vh;\">\n  <aside class=\"bg-black text-white\" style=\"width: 240px; pad: 24px;\">\n    <div class=\"fs-20 fw-700 mar-b-32\">Dashboard</div>\n    <nav class=\"flex flex-col gap-8\">\n      <a class=\"pad-8 round-8 cursor-pointer\" href=\"/\">Home</a>\n      <a class=\"pad-8 round-8 cursor-pointer\" href=\"/analytics\">Analytics</a>\n      <a class=\"pad-8 round-8 cursor-pointer\" href=\"/settings\">Settings</a>\n    </nav>\n  </aside>\n  <main class=\"flex-1 pad-32\">\n    <h1 class=\"fs-24 fw-600 mar-b-24\">Dashboard</h1>\n    <!-- Content here -->\n  </main>\n</div>",
+      "classes_used": [
+        "flex",
+        "bg-black",
+        "text-white",
+        "fs-20",
+        "fw-700",
+        "mar-b-32",
+        "flex",
+        "flex-col",
+        "gap-8",
+        "pad-8",
+        "round-8",
+        "cursor-pointer",
+        "flex-1",
+        "pad-32",
+        "fs-24",
+        "fw-600",
+        "mar-b-24"
+      ]
+    },
+    "loading-skeleton": {
+      "name": "Loading Skeleton",
+      "description": "Content loading placeholder",
+      "category": "feedback",
+      "html": "<div class=\"card\">\n  <div class=\"card-body\">\n    <div class=\"flex items-center gap-16 mar-b-16\">\n      <div class=\"skeleton skeleton-circle\" style=\"width: 48px; height: 48px;\"></div>\n      <div class=\"flex-1\">\n        <div class=\"skeleton skeleton-text\" style=\"width: 60%; height: 16px; margin-bottom: 8px;\"></div>\n        <div class=\"skeleton skeleton-text\" style=\"width: 40%; height: 12px;\"></div>\n      </div>\n    </div>\n    <div class=\"skeleton skeleton-text\" style=\"width: 100%; height: 12px; margin-bottom: 8px;\"></div>\n    <div class=\"skeleton skeleton-text\" style=\"width: 100%; height: 12px; margin-bottom: 8px;\"></div>\n    <div class=\"skeleton skeleton-text\" style=\"width: 70%; height: 12px;\"></div>\n  </div>\n</div>",
+      "classes_used": [
+        "card",
+        "card-body",
+        "flex",
+        "items-center",
+        "gap-16",
+        "mar-b-16",
+        "skeleton",
+        "skeleton-circle",
+        "skeleton-text",
+        "flex-1"
+      ]
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "@megoncss/cli",
-  "version": "2.0.0-alpha.1",
+  "version": "1.0.0",
   "description": "MegonCSS CLI — build, watch, init",
   "main": "./dist/index.js",
   "bin": {
@@ -16,5 +16,10 @@
   "license": "MIT",
   "dependencies": {
     "@megoncss/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "glob": "^13.0.6",
+    "typescript": "^6.0.3"
   }
 }

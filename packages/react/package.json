@@ -1,6 +1,6 @@
 {
   "name": "@megoncss/react",
-  "version": "2.0.0-alpha.1",
+  "version": "1.0.0",
   "description": "MegonCSS React components — buttons, modals, toasts, forms",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -15,5 +15,11 @@
   "peerDependencies": {
     "react": ">=18",
     "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "react": "^19.2.7",
+    "typescript": "^6.0.3"
   }
 }

@@ -1,0 +1,287 @@
+{
+  "version": "0.1.0",
+  "framework": "MegonCSS",
+  "components": {
+    "button": {
+      "name": "Button",
+      "description": "Interactive button component with multiple sizes, colors, and states",
+      "classes": {
+        "base": "btn",
+        "variants": {
+          "primary": "btn-primary",
+          "secondary": "btn-secondary",
+          "outline": "btn-outline",
+          "ghost": "btn-ghost",
+          "danger": "btn-danger"
+        },
+        "sizes": {
+          "sm": "btn-sm",
+          "md": "btn-md",
+          "lg": "btn-lg"
+        },
+        "states": {
+          "loading": "btn-loading",
+          "disabled": "btn:disabled"
+        }
+      },
+      "example": "<button class=\"btn btn-primary\">Click me</button>",
+      "usage": "Use for all clickable actions"
+    },
+    "input": {
+      "name": "Input",
+      "description": "Text input field with validation states",
+      "classes": {
+        "base": "input",
+        "sizes": {
+          "sm": "input-sm",
+          "md": "input-md",
+          "lg": "input-lg"
+        },
+        "states": {
+          "error": "input-error",
+          "success": "input-success"
+        }
+      },
+      "example": "<input class=\"input\" placeholder=\"Enter text...\">",
+      "usage": "Use for form text inputs"
+    },
+    "select": {
+      "name": "Select",
+      "description": "Dropdown select component",
+      "classes": {
+        "base": "select"
+      },
+      "example": "<select class=\"select\"><option>Option 1</option></select>",
+      "usage": "Use for dropdown selections"
+    },
+    "textarea": {
+      "name": "Textarea",
+      "description": "Multi-line text input",
+      "classes": {
+        "base": "textarea"
+      },
+      "example": "<textarea class=\"textarea\"></textarea>",
+      "usage": "Use for long text inputs"
+    },
+    "card": {
+      "name": "Card",
+      "description": "Container component for grouping content",
+      "classes": {
+        "base": "card",
+        "header": "card-header",
+        "body": "card-body",
+        "footer": "card-footer"
+      },
+      "example": "<div class=\"card\"><div class=\"card-body\">Content</div></div>",
+      "usage": "Use for grouping related content"
+    },
+    "badge": {
+      "name": "Badge",
+      "description": "Small label component for status or counts",
+      "classes": {
+        "base": "badge",
+        "variants": {
+          "primary": "badge-primary",
+          "success": "badge-success",
+          "warning": "badge-warning",
+          "danger": "badge-danger"
+        },
+        "sizes": {
+          "sm": "badge-sm",
+          "md": "badge-md",
+          "lg": "badge-lg"
+        },
+        "styles": {
+          "outline": "badge-outline",
+          "dot": "badge-dot",
+          "pill": "badge-pill"
+        }
+      },
+      "example": "<span class=\"badge badge-primary\">New</span>",
+      "usage": "Use for status indicators or counts"
+    },
+    "alert": {
+      "name": "Alert",
+      "description": "Feedback message component",
+      "classes": {
+        "base": "alert",
+        "variants": {
+          "success": "alert-success",
+          "warning": "alert-warning",
+          "danger": "alert-danger",
+          "info": "alert-info"
+        },
+        "sizes": {
+          "sm": "alert-sm",
+          "md": "alert-md",
+          "lg": "alert-lg"
+        }
+      },
+      "example": "<div class=\"alert alert-success\">Success!</div>",
+      "usage": "Use for user feedback messages"
+    },
+    "modal": {
+      "name": "Modal",
+      "description": "Dialog component for focused interactions",
+      "classes": {
+        "overlay": "modal-overlay",
+        "base": "modal",
+        "sizes": {
+          "sm": "modal-sm",
+          "md": "modal-md",
+          "lg": "modal-lg"
+        }
+      },
+      "example": "<div class=\"modal-overlay\"><div class=\"modal\">...</div></div>",
+      "usage": "Use for dialogs, confirmations, forms"
+    },
+    "toast": {
+      "name": "Toast",
+      "description": "Notification component that appears briefly",
+      "classes": {
+        "base": "toast",
+        "variants": {
+          "success": "toast-success",
+          "error": "toast-error",
+          "warning": "toast-warning",
+          "info": "toast-info"
+        },
+        "positions": {
+          "top-right": "toast-top-right",
+          "top-left": "toast-top-left",
+          "bottom-right": "toast-bottom-right",
+          "bottom-left": "toast-bottom-left"
+        }
+      },
+      "example": "<div class=\"toast toast-success\">Saved!</div>",
+      "usage": "Use for temporary notifications"
+    },
+    "table": {
+      "name": "Table",
+      "description": "Data table component with responsive support",
+      "classes": {
+        "base": "table",
+        "wrapper": "table-wrapper",
+        "header": "table-header",
+        "sticky": "table-sticky"
+      },
+      "example": "<div class=\"table-wrapper\"><table class=\"table\">...</table></div>",
+      "usage": "Use for tabular data display"
+    },
+    "dropdown": {
+      "name": "Dropdown",
+      "description": "Floating menu component",
+      "classes": {
+        "base": "dropdown",
+        "trigger": "dropdown-trigger",
+        "menu": "dropdown-menu",
+        "item": "dropdown-item"
+      },
+      "example": "<div class=\"dropdown\"><button class=\"dropdown-trigger\">Menu</button><div class=\"dropdown-menu\">...</div></div>",
+      "usage": "Use for menus and action lists"
+    },
+    "tabs": {
+      "name": "Tabs",
+      "description": "Tab navigation component",
+      "classes": {
+        "base": "tabs",
+        "list": "tabs-list",
+        "trigger": "tabs-trigger",
+        "content": "tabs-content"
+      },
+      "example": "<div class=\"tabs\"><div class=\"tabs-list\"><button class=\"tabs-trigger\">Tab 1</button></div></div>",
+      "usage": "Use for content switching"
+    },
+    "accordion": {
+      "name": "Accordion",
+      "description": "Collapsible content component",
+      "classes": {
+        "base": "accordion",
+        "item": "accordion-item",
+        "trigger": "accordion-trigger",
+        "content": "accordion-content"
+      },
+      "example": "<div class=\"accordion\"><div class=\"accordion-item\"><button class=\"accordion-trigger\">Title</button><div class=\"accordion-content\">Content</div></div></div>",
+      "usage": "Use for collapsible sections"
+    },
+    "skeleton": {
+      "name": "Skeleton",
+      "description": "Loading placeholder component",
+      "classes": {
+        "base": "skeleton",
+        "variants": {
+          "text": "skeleton-text",
+          "circle": "skeleton-circle",
+          "rect": "skeleton-rect"
+        }
+      },
+      "example": "<div class=\"skeleton skeleton-text\"></div>",
+      "usage": "Use for loading states"
+    },
+    "avatar": {
+      "name": "Avatar",
+      "description": "User avatar component",
+      "classes": {
+        "base": "avatar",
+        "sizes": {
+          "sm": "avatar-sm",
+          "md": "avatar-md",
+          "lg": "avatar-lg"
+        }
+      },
+      "example": "<img class=\"avatar\" src=\"user.jpg\" alt=\"User\">",
+      "usage": "Use for user profile images"
+    },
+    "divider": {
+      "name": "Divider",
+      "description": "Visual separator component",
+      "classes": {
+        "base": "divider",
+        "variants": {
+          "horizontal": "divider-horizontal",
+          "vertical": "divider-vertical"
+        }
+      },
+      "example": "<div class=\"divider\"></div>",
+      "usage": "Use for visual separation"
+    },
+    "tooltip": {
+      "name": "Tooltip",
+      "description": "Hover information component",
+      "classes": {
+        "base": "tooltip",
+        "positions": {
+          "top": "tooltip-top",
+          "bottom": "tooltip-bottom",
+          "left": "tooltip-left",
+          "right": "tooltip-right"
+        }
+      },
+      "example": "<button class=\"tooltip\" data-tooltip=\"Help text\">Hover me</button>",
+      "usage": "Use for hints and help text"
+    },
+    "switch": {
+      "name": "Switch",
+      "description": "Toggle switch component",
+      "classes": {
+        "base": "switch",
+        "input": "switch-input",
+        "slider": "switch-slider"
+      },
+      "example": "<label class=\"switch\"><input type=\"checkbox\" class=\"switch-input\"><span class=\"switch-slider\"></span></label>",
+      "usage": "Use for boolean toggles"
+    },
+    "field": {
+      "name": "Field",
+      "description": "Form field wrapper with label and error",
+      "classes": {
+        "base": "field",
+        "label": "field-label",
+        "error": "field-error",
+        "hint": "field-hint"
+      },
+      "example": "<div class=\"field\"><label class=\"field-label\">Email</label><input class=\"input\"><span class=\"field-error\">Required</span></div>",
+      "usage": "Use for form field grouping"
+    }
+  }
+}

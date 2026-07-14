@@ -1,6 +1,6 @@
 {
   "name": "@megoncss/core",
-  "version": "2.0.0-alpha.1",
+  "version": "1.0.0",
   "description": "MegonCSS core engine — config, compiler, class-to-CSS generator",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -12,5 +12,8 @@
   "files": [
     "dist/"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "vitest": "^3.2.6"
+  }
 }

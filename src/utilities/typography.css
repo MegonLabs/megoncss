@@ -1,6 +1,12 @@
 /* MegonCSS Typography Utilities */
 
 /* ─── Font Size — Exact Pixel ─── */
+.fs-8 {
+  font-size: 8px;
+}
+.fs-9 {
+  font-size: 9px;
+}
 .fs-10 {
   font-size: 10px;
 }
@@ -34,6 +40,9 @@
 .fs-28 {
   font-size: 28px;
 }
+.fs-30 {
+  font-size: 30px;
+}
 .fs-32 {
   font-size: 32px;
 }
@@ -43,14 +52,35 @@
 .fs-40 {
   font-size: 40px;
 }
+.fs-44 {
+  font-size: 44px;
+}
 .fs-48 {
   font-size: 48px;
+}
+.fs-56 {
+  font-size: 56px;
 }
 .fs-64 {
   font-size: 64px;
 }
+.fs-72 {
+  font-size: 72px;
+}
+.fs-80 {
+  font-size: 80px;
+}
+.fs-96 {
+  font-size: 96px;
+}
 
 /* ─── Font Weight — Exact Number ─── */
+.fw-100 {
+  font-weight: 100;
+}
+.fw-200 {
+  font-weight: 200;
+}
 .fw-300 {
   font-weight: 300;
 }
@@ -73,18 +103,56 @@
   font-weight: 900;
 }
 
-/* ─── Line Height ─── */
+/* ─── Line Height — Named ─── */
 .lh-none {
   line-height: 1;
 }
 .lh-tight {
   line-height: 1.25;
 }
+.lh-snug {
+  line-height: 1.375;
+}
 .lh-normal {
   line-height: 1.5;
 }
 .lh-relaxed {
-  line-height: 1.75;
+  line-height: 1.625;
+}
+.lh-loose {
+  line-height: 2;
+}
+
+/* ─── Line Height — Exact Pixel ─── */
+.lh-12 {
+  line-height: 12px;
+}
+.lh-14 {
+  line-height: 14px;
+}
+.lh-16 {
+  line-height: 16px;
+}
+.lh-20 {
+  line-height: 20px;
+}
+.lh-24 {
+  line-height: 24px;
+}
+.lh-28 {
+  line-height: 28px;
+}
+.lh-32 {
+  line-height: 32px;
+}
+.lh-36 {
+  line-height: 36px;
+}
+.lh-40 {
+  line-height: 40px;
+}
+.lh-48 {
+  line-height: 48px;
 }
 
 /* ─── Text Align ─── */
@@ -100,6 +168,12 @@
 .ta-justify {
   text-align: justify;
 }
+.ta-start {
+  text-align: start;
+}
+.ta-end {
+  text-align: end;
+}
 
 /* ─── Text Transform ─── */
 .tt-uppercase {
@@ -110,6 +184,9 @@
 }
 .tt-capitalize {
   text-transform: capitalize;
+}
+.tt-none {
+  text-transform: none;
 }
 
 /* ─── Text Decoration ─── */
@@ -122,6 +199,68 @@
 .td-line-through {
   text-decoration: line-through;
 }
+.td-overline {
+  text-decoration: overline;
+}
+.td-underline-dotted {
+  text-decoration: underline dotted;
+}
+.td-underline-dashed {
+  text-decoration: underline dashed;
+}
+.td-underline-wavy {
+  text-decoration: underline wavy;
+}
+
+/* ─── Text Decoration Thickness ─── */
+.td-thickness-1 {
+  text-decoration-thickness: 1px;
+}
+.td-thickness-2 {
+  text-decoration-thickness: 2px;
+}
+.td-thickness-4 {
+  text-decoration-thickness: 4px;
+}
+.td-thickness-auto {
+  text-decoration-thickness: auto;
+}
+
+/* ─── Underline Offset ─── */
+.underline-offset-1 {
+  text-underline-offset: 1px;
+}
+.underline-offset-2 {
+  text-underline-offset: 2px;
+}
+.underline-offset-4 {
+  text-underline-offset: 4px;
+}
+.underline-offset-auto {
+  text-underline-offset: auto;
+}
+
+/* ─── Text Overflow ─── */
+.text-ellipsis {
+  text-overflow: ellipsis;
+}
+.text-clip {
+  text-overflow: clip;
+}
+
+/* ─── Text Wrap ─── */
+.text-wrap {
+  text-wrap: wrap;
+}
+.text-nowrap {
+  text-wrap: nowrap;
+}
+.text-balance {
+  text-wrap: balance;
+}
+.text-pretty {
+  text-wrap: pretty;
+}
 
 /* ─── Word Break ─── */
 .wb-normal {
@@ -133,8 +272,11 @@
 .wb-keep-all {
   word-break: keep-all;
 }
+.wb-break-word {
+  overflow-wrap: break-word;
+}
 
-/* ─── Whitespace ─── */
+/* ─── White Space ─── */
 .ws-normal {
   white-space: normal;
 }
@@ -144,6 +286,34 @@
 .ws-pre {
   white-space: pre;
 }
+.ws-pre-wrap {
+  white-space: pre-wrap;
+}
+.ws-pre-line {
+  white-space: pre-line;
+}
+.ws-break-spaces {
+  white-space: break-spaces;
+}
+
+/* ─── Hyphens ─── */
+.hyphens-none {
+  hyphens: none;
+}
+.hyphens-manual {
+  hyphens: manual;
+}
+.hyphens-auto {
+  hyphens: auto;
+}
+
+/* ─── Font Style ─── */
+.italic {
+  font-style: italic;
+}
+.not-italic {
+  font-style: normal;
+}
 
 /* ─── Font Family ─── */
 .font-sans {
@@ -151,4 +321,130 @@
 }
 .font-mono {
   font-family: var(--font-mono);
+}
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+/* ─── Font Variant Numeric ─── */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+.ordinal {
+  font-variant-numeric: ordinal;
+}
+.slashed-zero {
+  font-variant-numeric: slashed-zero;
+}
+lining-nums {
+  font-variant-numeric: lining-nums;
+}
+.oldstyle-nums {
+  font-variant-numeric: oldstyle-nums;
+}
+.proportional-nums {
+  font-variant-numeric: proportional-nums;
+}
+.diagonal-fractions {
+  font-variant-numeric: diagonal-fractions;
+}
+.stacked-fractions {
+  font-variant-numeric: stacked-fractions;
+}
+
+/* ─── Letter Spacing ─── */
+.ls-tighter {
+  letter-spacing: -0.05em;
+}
+.ls-tight {
+  letter-spacing: -0.025em;
+}
+.ls-normal {
+  letter-spacing: 0em;
+}
+.ls-wide {
+  letter-spacing: 0.025em;
+}
+.ls-wider {
+  letter-spacing: 0.05em;
+}
+.ls-widest {
+  letter-spacing: 0.1em;
+}
+
+/* ─── Line Clamp ─── */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.line-clamp-4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+.line-clamp-5 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+.line-clamp-6 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+}
+.line-clamp-none {
+  overflow: visible;
+  display: block;
+  -webkit-box-orient: horizontal;
+  -webkit-line-clamp: unset;
+}
+
+/* ─── Truncate ─── */
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ─── Vertical Align ─── */
+.v-align-baseline {
+  vertical-align: baseline;
+}
+.v-align-top {
+  vertical-align: top;
+}
+.v-align-middle {
+  vertical-align: middle;
+}
+.v-align-bottom {
+  vertical-align: bottom;
+}
+.v-align-text-top {
+  vertical-align: text-top;
+}
+.v-align-text-bottom {
+  vertical-align: text-bottom;
+}
+.v-align-sub {
+  vertical-align: sub;
+}
+.v-align-super {
+  vertical-align: super;
 }

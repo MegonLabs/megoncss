@@ -141,3 +141,9 @@ vite.config.ts.timestamp-*
 # OS files
 .DS_Store
 Thumbs.db
+
+# MegonCSS custom ignores
+cdn.megon.org/
+.megon/
+dist/
+**/dist/

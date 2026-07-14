@@ -1,0 +1,133 @@
+{
+  "Flex Container": {
+    "prefix": "mc-flex",
+    "body": "class=\"flex items-center justify-between gap-4\""
+  },
+  "Flex Column": {
+    "prefix": "mc-flex-col",
+    "body": "class=\"flex flex-col gap-4\""
+  },
+  "Grid 2": {
+    "prefix": "mc-grid-2",
+    "body": "class=\"grid grid-cols-2 gap-4\""
+  },
+  "Grid 3": {
+    "prefix": "mc-grid-3",
+    "body": "class=\"grid grid-cols-3 gap-4\""
+  },
+  "Grid 4": {
+    "prefix": "mc-grid-4",
+    "body": "class=\"grid grid-cols-4 gap-4\""
+  },
+  "Center": {
+    "prefix": "mc-center",
+    "body": "class=\"flex items-center justify-center\""
+  },
+  "Stack": {
+    "prefix": "mc-stack",
+    "body": "class=\"flex flex-col items-center gap-2\""
+  },
+  "Card": {
+    "prefix": "mc-card",
+    "body": "class=\"rounded-lg border border-gray-200 bg-white p-6 shadow-sm\""
+  },
+  "Button Primary": {
+    "prefix": "mc-btn-primary",
+    "body": "class=\"btn btn-primary\""
+  },
+  "Button Secondary": {
+    "prefix": "mc-btn-secondary",
+    "body": "class=\"btn btn-secondary\""
+  },
+  "Button Outline": {
+    "prefix": "mc-btn-outline",
+    "body": "class=\"btn btn-outline\""
+  },
+  "Input": {
+    "prefix": "mc-input",
+    "body": "class=\"input w-full\""
+  },
+  "Container": {
+    "prefix": "mc-container",
+    "body": "class=\"mx-auto max-w-container pad-x-6\""
+  },
+  "Section": {
+    "prefix": "mc-section",
+    "body": "class=\"pad-y-16\""
+  },
+  "Text Heading": {
+    "prefix": "mc-heading",
+    "body": "class=\"fs-32 fw-700 ta-center\""
+  },
+  "Text Subtitle": {
+    "prefix": "mc-subtitle",
+    "body": "class=\"fs-18 text-gray\""
+  },
+  "Modal": {
+    "prefix": "mc-modal",
+    "body": [
+      "<div class=\"modal-overlay\">",
+      "  <div class=\"modal-content modal-md\">",
+      "    <div class=\"modal-header\">",
+      "      <h2 class=\"modal-title\">Title</h2>",
+      "      <button class=\"modal-close\">&times;</button>",
+      "    </div>",
+      "    <div class=\"modal-body\">",
+      "      Content goes here",
+      "    </div>",
+      "    <div class=\"modal-footer\">",
+      "      <button class=\"btn btn-outline\">Cancel</button>",
+      "      <button class=\"btn btn-primary\">Confirm</button>",
+      "    </div>",
+      "  </div>",
+      "</div>"
+    ]
+  },
+  "Toast": {
+    "prefix": "mc-toast",
+    "body": [
+      "<div class=\"toast toast-success\">",
+      "  <div class=\"toast-content\">",
+      "    <p class=\"toast-title\">Success</p>",
+      "    <p class=\"toast-desc\">Operation completed.</p>",
+      "  </div>",
+      "  <button class=\"toast-close\">&times;</button>",
+      "</div>"
+    ]
+  },
+  "Alert": {
+    "prefix": "mc-alert",
+    "body": [
+      "<div class=\"alert alert-info\">",
+      "  <div class=\"alert-icon\">ℹ️</div>",
+      "  <div class=\"alert-content\">",
+      "    <p class=\"alert-title\">Info</p>",
+      "    <p class=\"alert-desc\">Description goes here.</p>",
+      "  </div>",
+      "</div>"
+    ]
+  },
+  "Table": {
+    "prefix": "mc-table",
+    "body": [
+      "<div class=\"megon-table-wrapper\">",
+      "  <table class=\"megon-table megon-table-striped megon-table-hover\">",
+      "    <thead>",
+      "      <tr>",
+      "        <th>Header 1</th>",
+      "        <th>Header 2</th>",
+      "        <th>Header 3</th>",
+      "      </tr>",
+      "    </thead>",
+      "    <tbody>",
+      "      <tr>",
+      "        <td>Cell 1</td>",
+      "        <td>Cell 2</td>",
+      "        <td>Cell 3</td>",
+      "      </tr>",
+      "    </tbody>",
+      "  </table>",
+      "</div>"
+    ]
+  }
+}

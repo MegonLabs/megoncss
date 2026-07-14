@@ -1,6 +1,6 @@
 {
   "name": "@megoncss/browser",
-  "version": "2.0.0-alpha.1",
+  "version": "1.0.0",
   "description": "MegonCSS browser/CDN build — JIT class scanning in the browser",
   "main": "./dist/megon.js",
   "browser": "./dist/megon.js",
@@ -14,5 +14,8 @@
   "license": "MIT",
   "dependencies": {
     "@megoncss/core": "workspace:*"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.1"
   }
 }

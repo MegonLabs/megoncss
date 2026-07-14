@@ -1,0 +1,125 @@
+{
+  "name": "megoncss",
+  "displayName": "MegonCSS",
+  "description": "Autocomplete, linting, and documentation for MegonCSS utility classes",
+  "version": "1.0.0",
+  "publisher": "megonlabs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MegonLabs/megoncss.git"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Formatters",
+    "Linters"
+  ],
+  "keywords": [
+    "css",
+    "utility",
+    "megoncss",
+    "autocomplete",
+    "snippets"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "megoncss",
+        "aliases": [
+          "MegonCSS",
+          "megoncss"
+        ],
+        "extensions": [
+          ".megon.css"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "html",
+        "path": "./snippets/html.json"
+      },
+      {
+        "language": "jsx",
+        "path": "./snippets/html.json"
+      },
+      {
+        "language": "tsx",
+        "path": "./snippets/html.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "megoncss.showDocs",
+        "title": "MegonCSS: Show Documentation"
+      },
+      {
+        "command": "megoncss.sortClasses",
+        "title": "MegonCSS: Sort Classes"
+      },
+      {
+        "command": "megoncss.validateClasses",
+        "title": "MegonCSS: Validate Classes"
+      }
+    ],
+    "configuration": {
+      "title": "MegonCSS",
+      "properties": {
+        "megoncss.content": {
+          "type": "array",
+          "default": [
+            "**/*.html",
+            "**/*.tsx",
+            "**/*.jsx",
+            "**/*.vue",
+            "**/*.svelte"
+          ],
+          "description": "Content files to scan for class names"
+        },
+        "megoncss.sortOrder": {
+          "type": "array",
+          "default": [
+            "layout",
+            "display",
+            "flex",
+            "grid",
+            "spacing",
+            "sizing",
+            "typography",
+            "colors",
+            "borders",
+            "effects",
+            "variants"
+          ],
+          "description": "Order of class sorting groups"
+        },
+        "megoncss.enableAutocomplete": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable class name autocomplete"
+        },
+        "megoncss.enableValidation": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable class name validation"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "esbuild src/extension.ts --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node",
+    "dev": "esbuild src/extension.ts --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node --watch",
+    "lint": "eslint src --ext ts",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "esbuild": "^0.20.0",
+    "typescript": "^5.3.0"
+  }
+}

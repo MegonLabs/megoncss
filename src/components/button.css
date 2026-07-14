@@ -29,7 +29,11 @@
   pointer-events: none;
 }
 
-/* Variants */
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* ─── Variants ─── */
 .btn-primary {
   background-color: var(--color-blue);
   color: white;
@@ -71,24 +75,106 @@
   background-color: var(--color-red-dark);
 }
 
-/* Sizes */
+.btn-success {
+  background-color: var(--color-green);
+  color: white;
+}
+.btn-success:hover {
+  background-color: var(--color-green-dark);
+}
+
+.btn-warning {
+  background-color: var(--color-yellow);
+  color: #000;
+}
+.btn-warning:hover {
+  background-color: #ca8a04;
+}
+
+.btn-orange {
+  background-color: var(--color-orange);
+  color: white;
+}
+.btn-orange:hover {
+  background-color: #c2410c;
+}
+
+.btn-purple {
+  background-color: var(--color-purple);
+  color: white;
+}
+.btn-purple:hover {
+  background-color: #7c3aed;
+}
+
+.btn-pink {
+  background-color: var(--color-pink);
+  color: white;
+}
+.btn-pink:hover {
+  background-color: #db2777;
+}
+
+.btn-indigo {
+  background-color: var(--color-indigo);
+  color: white;
+}
+.btn-indigo:hover {
+  background-color: #4f46e5;
+}
+
+.btn-teal {
+  background-color: var(--color-teal);
+  color: white;
+}
+.btn-teal:hover {
+  background-color: #0d9488;
+}
+
+.btn-amber {
+  background-color: var(--color-amber);
+  color: #000;
+}
+.btn-amber:hover {
+  background-color: #d97706;
+}
+
+/* ─── Sizes ─── */
+.btn-xs {
+  height: 24px;
+  padding: 0 8px;
+  border-radius: var(--radius-4);
+  font-size: 11px;
+}
+
 .btn-sm {
   height: 32px;
   padding: 0 12px;
   border-radius: var(--radius-6);
   font-size: 13px;
 }
+
 .btn-md {
   height: 40px;
   padding: 0 16px;
   border-radius: var(--radius-8);
 }
+
 .btn-lg {
   height: 48px;
   padding: 0 24px;
   border-radius: var(--radius-8);
   font-size: 16px;
 }
+
+.btn-xl {
+  height: 56px;
+  padding: 0 32px;
+  border-radius: var(--radius-10);
+  font-size: 18px;
+}
+
+/* ─── Icon Buttons ─── */
 .btn-icon {
   width: 40px;
   height: 40px;
@@ -96,7 +182,26 @@
   border-radius: var(--radius-8);
 }
 
-/* Loading State */
+.btn-icon-sm {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border-radius: var(--radius-6);
+}
+
+.btn-icon-lg {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border-radius: var(--radius-10);
+}
+
+/* ─── Full Width ─── */
+.btn-block {
+  width: 100%;
+}
+
+/* ─── Loading State ─── */
 .btn-loading {
   position: relative;
   color: transparent !important;

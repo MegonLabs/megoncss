@@ -14,7 +14,23 @@
   line-height: 1.4;
 }
 
-/* Badge Variants */
+/* ─── Sizes ─── */
+.badge-sm {
+  padding: 1px 6px;
+  font-size: 10px;
+}
+
+.badge-md {
+  padding: 2px 10px;
+  font-size: 11px;
+}
+
+.badge-lg {
+  padding: 4px 12px;
+  font-size: 12px;
+}
+
+/* ─── Color Variants ─── */
 .badge-blue {
   background-color: var(--color-blue-light);
   color: var(--color-blue-dark);
@@ -28,4 +44,174 @@
 .badge-green {
   background-color: var(--color-green-light);
   color: var(--color-green-dark);
+}
+
+.badge-yellow {
+  background-color: var(--color-yellow-light);
+  color: #92400e;
+}
+
+.badge-orange {
+  background-color: var(--color-orange-light);
+  color: #9a3412;
+}
+
+.badge-purple {
+  background-color: var(--color-purple-light);
+  color: #6b21a8;
+}
+
+.badge-pink {
+  background-color: var(--color-pink-light);
+  color: #be185d;
+}
+
+.badge-indigo {
+  background-color: var(--color-indigo-light);
+  color: #3730a3;
+}
+
+.badge-teal {
+  background-color: var(--color-teal-light);
+  color: #115e59;
+}
+
+.badge-amber {
+  background-color: var(--color-amber-light);
+  color: #92400e;
+}
+
+.badge-slate {
+  background-color: var(--slate-100);
+  color: var(--slate-700);
+}
+
+/* ─── Outline Variants ─── */
+.badge-outline {
+  background-color: transparent;
+  border: 1px solid currentColor;
+}
+
+.badge-outline.badge-blue {
+  color: var(--color-blue);
+}
+
+.badge-outline.badge-red {
+  color: var(--color-red);
+}
+
+.badge-outline.badge-green {
+  color: var(--color-green);
+}
+
+.badge-outline.badge-yellow {
+  color: var(--color-yellow);
+}
+
+.badge-outline.badge-orange {
+  color: var(--color-orange);
+}
+
+.badge-outline.badge-purple {
+  color: var(--color-purple);
+}
+
+.badge-outline.badge-pink {
+  color: var(--color-pink);
+}
+
+.badge-outline.badge-indigo {
+  color: var(--color-indigo);
+}
+
+.badge-outline.badge-teal {
+  color: var(--color-teal);
+}
+
+.badge-outline.badge-amber {
+  color: var(--color-amber);
+}
+
+/* ─── Dot Badge ─── */
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  min-width: 8px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 0;
+  line-height: 1;
+}
+
+.badge-dot.badge-blue {
+  background-color: var(--color-blue);
+}
+.badge-dot.badge-red {
+  background-color: var(--color-red);
+}
+.badge-dot.badge-green {
+  background-color: var(--color-green);
+}
+.badge-dot.badge-yellow {
+  background-color: var(--color-yellow);
+}
+.badge-dot.badge-orange {
+  background-color: var(--color-orange);
+}
+.badge-dot.badge-purple {
+  background-color: var(--color-purple);
+}
+.badge-dot.badge-pink {
+  background-color: var(--color-pink);
+}
+.badge-dot.badge-indigo {
+  background-color: var(--color-indigo);
+}
+.badge-dot.badge-teal {
+  background-color: var(--color-teal);
+}
+.badge-dot.badge-amber {
+  background-color: var(--color-amber);
+}
+
+/* ─── Pill Badge (with dot indicator) ─── */
+.badge-pill {
+  padding-left: 6px;
+  gap: 6px;
+}
+
+.badge-pill::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+  flex-shrink: 0;
+}
+
+/* ─── Notification Badge ─── */
+.badge-notification {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  font-size: 10px;
+  border-radius: 9px;
+  background-color: var(--color-red);
+  color: white;
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 18px;
+  text-align: center;
+}
+
+.badge-notification:empty {
+  min-width: 8px;
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  top: 0;
+  right: 0;
 }
